@@ -2,6 +2,10 @@ ul {
   list-style: none;
 }
 
+.logo {
+  margin-left: 15px;
+}
+
 .navbar {
   display: flex;
   align-items: center;
