@@ -2,10 +2,6 @@ import React, { useEffect } from "react";
 import { Line } from "react-chartjs-2";
 
 const Chart = ({ cases, deaths }) => {
-  // console.log(deaths);
-
-  // const dateArray = [];
-
   // if (cases.length > 0) {
   //   dateArray.push(Object.keys(cases[0]));
   // }
@@ -19,8 +15,15 @@ const Chart = ({ cases, deaths }) => {
   //   console.log(newDateArray);
   // }
 
+  // console.log(cases[0].UID);
+  const dateArray = [];
+  dateArray.push(Object.keys(cases[0]));
+  const chartLabel = dateArray[0].slice(7, dateArray[0].length);
+
+  console.log(chartLabel);
+
   const data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: chartLabel,
     datasets: [
       {
         label: "Cases",
