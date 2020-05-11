@@ -7,13 +7,26 @@ const Chart = ({ cases, deaths }) => {
   dateArray.push(Object.keys(cases[0]));
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
 
-  console.log(chartLabel);
+  const casesArray = [];
+  const deathsArray = [];
 
-  cases.map((item) => {
-    chartLabel.map((date) => {
-      console.log(item[date]);
+  chartLabel.map((date) => {
+    let numCases = 0;
+    cases.map((item) => {
+      numCases += item[date];
     });
+    casesArray.push(numCases);
   });
+
+  chartLabel.map((date) => {
+    let numDeaths = 0;
+    deaths.map((item) => {
+      numDeaths += item[date];
+    });
+    deathsArray.push(numDeaths);
+  });
+
+  // console.log(casesArray);
 
   const data = {
     labels: chartLabel,
@@ -37,7 +50,7 @@ const Chart = ({ cases, deaths }) => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 400],
+        data: casesArray,
       },
       {
         label: "Deaths",
@@ -58,7 +71,7 @@ const Chart = ({ cases, deaths }) => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [45, 23, 94, 57, 52, 67, 400],
+        data: deathsArray,
       },
     ],
   };
