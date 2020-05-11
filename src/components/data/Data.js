@@ -29,9 +29,15 @@ const Data = () => {
   }, []);
 
   return (
-    <div className="data">
-      <CDList dailyReport={dailyReport} />
-      <Chart cases={cases} deaths={deaths} />
+    <div>
+      {cases.length > 0 ? (
+        <div className="data">
+          <CDList dailyReport={dailyReport} />
+          <Chart cases={cases} deaths={deaths} />
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };
