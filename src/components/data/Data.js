@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import StateList from "./StateList";
+import CDList from "./CDList";
 import "./Data.css";
 
 const Data = () => {
@@ -24,8 +25,7 @@ const Data = () => {
   return (
     <div className="data">
       <StateList dailyReport={dailyReport} />
-      <StateList dailyReport={dailyReport} />
-      <StateList dailyReport={dailyReport} />
+      <CDList dailyReport={dailyReport} />
     </div>
   );
 };
