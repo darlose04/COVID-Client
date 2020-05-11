@@ -4,7 +4,7 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <header>
-      <div id="navbar" class="navbar">
+      <div id="navbar" className="navbar">
         <h1 className="logo">
           <i className="fas fa-viruses"></i>
         </h1>
