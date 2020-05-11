@@ -6,7 +6,7 @@ const Navbar = () => {
     <header>
       <div id="navbar" class="navbar">
         <h1 className="logo">
-          <i class="fas fa-viruses"></i>
+          <i className="fas fa-viruses"></i>
         </h1>
         <nav>
           <ul>
