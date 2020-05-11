@@ -2,25 +2,18 @@ import React, { useEffect } from "react";
 import { Line } from "react-chartjs-2";
 
 const Chart = ({ cases, deaths }) => {
-  // if (cases.length > 0) {
-  //   dateArray.push(Object.keys(cases[0]));
-  // }
-
-  // // cases.map((item) => dateArray.push(Object.keys(item)));
-  // if (dateArray.length > 0) {
-  //   // console.log(dateArray[0]);
-  //   let arrLen = dateArray[0].length;
-  //   console.log(arrLen);
-  //   let newDateArray = dateArray[0].slice(7, arrLen);
-  //   console.log(newDateArray);
-  // }
-
-  // console.log(cases[0].UID);
+  // create date array for chart label (x axis)
   const dateArray = [];
   dateArray.push(Object.keys(cases[0]));
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
 
   console.log(chartLabel);
+
+  cases.map((item) => {
+    chartLabel.map((date) => {
+      console.log(item[date]);
+    });
+  });
 
   const data = {
     labels: chartLabel,
