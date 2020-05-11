@@ -10,7 +10,7 @@ const Navbar = () => {
         </h1>
         <nav>
           <ul>
-            <li>
+            {/* <li>
               <a href="#">Home</a>
             </li>
             <li>
@@ -21,7 +21,7 @@ const Navbar = () => {
             </li>
             <li>
               <a href="#">About</a>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
