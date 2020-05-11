@@ -9,31 +9,23 @@ const Data = () => {
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
 
-  const getCases = async () => {
-    const res = await axios.get("http://localhost:4000/api/usa/coronacases");
-    setCases(res.data);
-  };
-
-  const getDeaths = async () => {
-    const res = await axios.get("http://localhost:4000/api/usa/coronadeaths");
-    setDeaths(res.data);
-  };
-
-  const getDailyReport = async () => {
-    const res = await axios.get("http://localhost:4000/api/usa/dailyreport");
-    setDailyReport(res.data);
-  };
-
   useEffect(() => {
-    getCases();
-  }, []);
+    const getData = async () => {
+      const cases = await axios.get(
+        "http://localhost:4000/api/usa/coronacases"
+      );
+      setCases(cases.data);
+      const deaths = await axios.get(
+        "http://localhost:4000/api/usa/coronadeaths"
+      );
+      setDeaths(deaths.data);
+      const dailyReport = await axios.get(
+        "http://localhost:4000/api/usa/dailyreport"
+      );
+      setDailyReport(dailyReport.data);
+    };
 
-  useEffect(() => {
-    getDeaths();
-  }, []);
-
-  useEffect(() => {
-    getDailyReport();
+    getData();
   }, []);
 
   return (
