@@ -3,12 +3,12 @@ import React from "react";
 const CDList = ({ dailyReport }) => {
   return (
     <div>
-      <h3>States / Territories</h3>
+      <h2>States / Territories</h2>
       <ul>
         {dailyReport.map((item) => (
           <li key={item.index}>
-            {item.Province_State} <p>Cases: {item.Confirmed}</p>{" "}
-            <p>Deaths: {item.Deaths}</p>
+            <h3>{item.Province_State} </h3>
+            <p>Cases: {item.Confirmed}</p> <p>Deaths: {item.Deaths}</p>
             <p>Recovered: {item.Recovered}</p>
           </li>
         ))}
