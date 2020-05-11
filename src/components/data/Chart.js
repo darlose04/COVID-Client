@@ -4,7 +4,12 @@ import { Line } from "react-chartjs-2";
 const Chart = ({ cases, deaths }) => {
   // console.log(deaths);
 
-  console.log(cases[0]);
+  console.log(cases);
+  const dateArray = [];
+
+  // cases.map((item) => dateArray.push(Object.keys(item)));
+
+  // console.log(dateArray);
 
   const data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
@@ -28,7 +33,7 @@ const Chart = ({ cases, deaths }) => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40],
+        data: [65, 59, 80, 81, 56, 55, 400],
       },
       {
         label: "Deaths",
@@ -49,7 +54,7 @@ const Chart = ({ cases, deaths }) => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: [45, 23, 94, 57, 52, 67, 40],
+        data: [45, 23, 94, 57, 52, 67, 400],
       },
     ],
   };
