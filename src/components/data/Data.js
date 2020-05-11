@@ -19,8 +19,6 @@ const Data = () => {
     getDailyReport();
   }, []);
 
-  // console.log(dailyReport[0]);
-
   return (
     <div>
       <h2>
