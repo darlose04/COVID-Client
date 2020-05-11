@@ -1,12 +1,13 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/layout/Navbar";
+import Data from "./components/data/Data";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <h1>COVID-19 API Client</h1>
+      <Data />
     </div>
   );
 }
