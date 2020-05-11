@@ -1,5 +1,15 @@
 .data {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+.data div {
+  /* border: red 1px solid; */
+}
+
+.data ul li {
+  padding: 10px 0;
+  border-bottom: #333 1px solid;
 }
