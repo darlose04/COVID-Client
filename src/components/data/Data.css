@@ -1,6 +1,6 @@
 .data {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   margin: 10px 10px;
 }
 
