@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import StateList from "./StateList";
 import CDList from "./CDList";
+import Chart from "./Chart";
 import "./Data.css";
 
 const Data = () => {
-  const [data, setData] = useState([]);
+  const [cases, setCases] = useState([]);
+  const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
 
-  const getData = async () => {
+  const getCases = async () => {
     const res = await axios.get("http://localhost:4000/api/usa/coronacases");
-    setData(res.data);
+    setCases(res.data);
+  };
+
+  const getDeaths = async () => {
+    const res = await axios.get("http://localhost:4000/api/usa/coronadeaths");
+    setDeaths(res.data);
   };
 
   const getDailyReport = async () => {
@@ -19,13 +25,21 @@ const Data = () => {
   };
 
   useEffect(() => {
+    getCases();
+  }, []);
+
+  useEffect(() => {
+    getDeaths();
+  }, []);
+
+  useEffect(() => {
     getDailyReport();
   }, []);
 
   return (
     <div className="data">
-      <StateList dailyReport={dailyReport} />
       <CDList dailyReport={dailyReport} />
+      <Chart cases={cases} deaths={deaths} />
     </div>
   );
 };
