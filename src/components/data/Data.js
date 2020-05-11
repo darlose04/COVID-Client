@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import StateList from "./StateList";
 
 const Data = () => {
   const [data, setData] = useState([]);
@@ -21,9 +22,7 @@ const Data = () => {
 
   return (
     <div>
-      <h2>
-        This is where the data components for charts, states, and stats will go
-      </h2>
+      <StateList dailyReport={dailyReport} />
     </div>
   );
 };
