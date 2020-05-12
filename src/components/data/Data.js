@@ -33,8 +33,8 @@ const Data = () => {
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
           <CDList dailyReport={dailyReport} />
-          <Chart info={cases} label="Cases" />
-          <Chart info={deaths} label="Deaths" />
+          <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
+          <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
         </div>
       ) : (
         <div></div>
