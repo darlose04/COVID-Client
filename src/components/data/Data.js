@@ -30,10 +30,11 @@ const Data = () => {
 
   return (
     <div>
-      {cases.length > 0 ? (
+      {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
           <CDList dailyReport={dailyReport} />
-          <Chart cases={cases} deaths={deaths} />
+          <Chart info={cases} label="Cases" />
+          <Chart info={deaths} label="Deaths" />
         </div>
       ) : (
         <div></div>
