@@ -2,7 +2,7 @@ import React from "react";
 
 const CDList = ({ dailyReport }) => {
   return (
-    <div>
+    <div className="state-list">
       <h2>States / Territories</h2>
       <ul>
         {dailyReport.map((item) => (
