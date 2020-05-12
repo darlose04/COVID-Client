@@ -46,7 +46,6 @@ const Chart = ({ info, label }) => {
 
   return (
     <div>
-      <h1>This is where the chart will go</h1>
       <Line data={data} />
     </div>
   );
