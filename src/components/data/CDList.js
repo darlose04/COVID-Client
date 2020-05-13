@@ -18,7 +18,7 @@ const CDList = ({ dailyReport }) => {
   });
 
   return (
-    <div>
+    <div className="list-data">
       <div className="totals">
         <h2>U.S. Totals</h2>
         <ul>

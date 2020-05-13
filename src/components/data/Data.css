@@ -4,6 +4,7 @@
   grid-template-rows: 2fr 1fr 1fr;
   grid-gap: 1rem;
   margin: 10px 10px;
+  height: 1000px;
 }
 
 .data ul li {
@@ -15,13 +16,19 @@
   border: none;
 }
 
+.list-data {
+  height: 1000px;
+}
+
 .totals {
+  height: 30%;
   margin-bottom: 10px;
   padding: 5px;
   border: 1px solid black;
 }
 
 .state-list {
+  height: 65%;
   overflow-y: auto;
   padding: 5px 5px;
   border: 1px solid black;
