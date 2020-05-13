@@ -1,8 +1,6 @@
 import React from "react";
 
 const CDList = ({ dailyReport }) => {
-  console.log(dailyReport);
-
   let totalCases = 0;
   let totalDeaths = 0;
   let totalActive = 0;
