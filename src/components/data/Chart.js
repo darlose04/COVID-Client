@@ -45,7 +45,7 @@ const Chart = ({ info, label, color }) => {
   };
 
   return (
-    <div className="chart">
+    <div className="line-chart">
       <Line data={data} />
     </div>
   );
