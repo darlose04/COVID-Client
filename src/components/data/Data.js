@@ -29,7 +29,7 @@ const Data = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
           <CDList dailyReport={dailyReport} />
