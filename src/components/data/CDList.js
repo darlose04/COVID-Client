@@ -17,17 +17,21 @@ const CDList = ({ dailyReport }) => {
     totalRecovered += state.Recovered;
   });
 
+  const numWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   return (
     <div className="list-data">
       <div className="totals">
         <h2>U.S. Totals</h2>
         <ul>
-          <li>Confirmed: {totalCases}</li>
-          <li>Deaths: {totalDeaths}</li>
-          <li>Active: {totalActive}</li>
-          <li>Hospitalized: {totalHospitalized}</li>
-          <li>Tested: {totalTested}</li>
-          <li>Recovered: {totalRecovered}</li>
+          <li>Confirmed: {numWithCommas(totalCases)}</li>
+          <li>Deaths: {numWithCommas(totalDeaths)}</li>
+          <li>Active: {numWithCommas(totalActive)}</li>
+          <li>Hospitalized: {numWithCommas(totalHospitalized)}</li>
+          <li>Tested: {numWithCommas(totalTested)}</li>
+          <li>Recovered: {numWithCommas(totalRecovered)}</li>
         </ul>
       </div>
       <div className="state-list">
