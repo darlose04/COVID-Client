@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header>
-      <div id="navbar" className="container navbar">
+      <div id="navbar" className="navbar">
         <h1 className="logo">
           <i className="fas fa-viruses"></i>
         </h1>
@@ -13,6 +13,12 @@ const Navbar = () => {
           <ul>
             <li>
               <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="#">United States</Link>
+            </li>
+            <li>
+              <Link to="#">Global</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
