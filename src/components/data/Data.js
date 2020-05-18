@@ -30,7 +30,7 @@ const Data = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
           <CDList dailyReport={dailyReport} />
@@ -39,8 +39,6 @@ const Data = () => {
             <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
           </div>
           <StateList dailyReport={dailyReport} />
-          <div></div>
-          <div></div>
         </div>
       ) : (
         <div></div>
