@@ -46,10 +46,10 @@ const CDList = ({ dailyReport }) => {
             return (
               <li key={item.index}>
                 <h3>{item.Province_State}</h3>
-                <p>Cases: {numWithCommas(numCases)}</p>{" "}
+                <p>Cases: {numWithCommas(numCases)}</p>
                 <p>Deaths: {numWithCommas(numDeaths)}</p>
                 {numRecovered ? (
-                  <p>Recovered: {numWithCommas(numRecovered)}</p>
+                  <p>Recovered:{numWithCommas(numRecovered)}</p>
                 ) : (
                   <p>Recovered: {item.Recovered}</p>
                 )}
