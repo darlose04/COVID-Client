@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <header>
-      <div id="navbar" className="navbar">
+      <div id="navbar" className="container navbar">
         <h1 className="logo">
           <i className="fas fa-viruses"></i>
         </h1>
