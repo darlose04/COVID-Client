@@ -67,3 +67,8 @@ ul {
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
+
+.data:nth-child(2) {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
