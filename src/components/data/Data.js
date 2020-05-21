@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Disclaimer from "../layout/Disclaimer";
 import CDList from "./CDList";
 import StateList from "./StateList";
 import Chart from "./Chart";
@@ -29,6 +30,7 @@ const Data = () => {
     <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
+          <Disclaimer />
           <CDList dailyReport={dailyReport} />
           <div className="charts">
             <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
