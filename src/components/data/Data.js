@@ -4,6 +4,7 @@ import Disclaimer from "../layout/Disclaimer";
 import CDList from "./CDList";
 import StateList from "./StateList";
 import Chart from "./Chart";
+import ReChart from "./ReChart";
 import "./Data.css";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
@@ -34,7 +35,8 @@ const Data = () => {
           <CDList dailyReport={dailyReport} />
           <div className="charts">
             <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
-            <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
+            {/* <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" /> */}
+            <ReChart info={deaths} />
           </div>
           <div className="filler">
             <StateList dailyReport={dailyReport} />
