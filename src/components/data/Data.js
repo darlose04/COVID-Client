@@ -5,6 +5,8 @@ import StateList from "./StateList";
 import Chart from "./Chart";
 import "./Data.css";
 
+const baseUrl = "https://www.cov-api.com/api/usa";
+
 const Data = () => {
   const [cases, setCases] = useState([]);
   const [deaths, setDeaths] = useState([]);
@@ -12,17 +14,11 @@ const Data = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const cases = await axios.get(
-        "http://localhost:4000/api/usa/coronacases"
-      );
+      const cases = await axios.get(`${baseUrl}/coronacases`);
       setCases(cases.data);
-      const deaths = await axios.get(
-        "http://localhost:4000/api/usa/coronadeaths"
-      );
+      const deaths = await axios.get(`${baseUrl}/coronadeaths`);
       setDeaths(deaths.data);
-      const dailyReport = await axios.get(
-        "http://localhost:4000/api/usa/dailyreport"
-      );
+      const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       setDailyReport(dailyReport.data);
     };
 
