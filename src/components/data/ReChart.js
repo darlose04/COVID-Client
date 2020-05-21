@@ -49,7 +49,7 @@ const ReChart = ({ info }) => {
         <XAxis dataKey="date" />
         <YAxis />
         <Tooltip />
-        <Line type="monotone" dataKey="value" />
+        <Line type="monotone" dataKey="value" stroke="rgba(198, 9, 9, 1)" />
       </LineChart>
     </div>
   );
