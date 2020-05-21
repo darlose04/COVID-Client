@@ -70,6 +70,15 @@ ul {
   /* background: #f3f3f3; */
 }
 
+.data .disclaimer {
+  grid-column: 1 / span 5;
+  padding: 1rem;
+  border: solid red 2px;
+  text-align: center;
+  align-items: center;
+  margin: 1rem;
+}
+
 .charts {
   background: #f3f3f3;
   /* display: grid; */
