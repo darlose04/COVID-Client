@@ -40,7 +40,7 @@ const ReChart = ({ info }) => {
   return (
     <div>
       <LineChart
-        width={700}
+        width={900}
         height={500}
         data={data}
         margin={{ top: 5, right: 5, left: 10, bottom: 5 }}
