@@ -10,11 +10,16 @@ import {
 } from "recharts";
 
 const ReChart = ({ info, dataKey, color }) => {
+  // const numWithCommas = (num) => {
+  //   return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  // };
+
   const dateArray = [];
   dateArray.push(Object.keys(info[0]));
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
 
   const infoArray = [];
+  // console.log(chartLabel);
 
   chartLabel.map((date) => {
     let numInfo = 0;
@@ -23,6 +28,9 @@ const ReChart = ({ info, dataKey, color }) => {
     });
     infoArray.push(numInfo);
   });
+
+  console.log("InfoArray");
+  console.log(infoArray);
 
   let data = [];
   // chartLabel.forEach((label, i) => (data[label] = infoArray[i]));
@@ -36,8 +44,8 @@ const ReChart = ({ info, dataKey, color }) => {
     data.push(dataObj);
   }
 
-  // console.log(value);
-  // console.log(data);
+  console.log(dataKey);
+  console.log(data);
 
   return (
     <div>
