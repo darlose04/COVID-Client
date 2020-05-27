@@ -1,6 +1,6 @@
 import React from "react";
 
-const CDList = ({ dailyReport }) => {
+const CDList = ({ dailyReport, handleChange }) => {
   let totalCases = 0;
   let totalDeaths = 0;
   let totalActive = 0;
@@ -41,11 +41,10 @@ const CDList = ({ dailyReport }) => {
             let numCases = item.Confirmed;
             let numDeaths = item.Deaths;
             let numRecovered = item.Recovered;
-            console.log(typeof numCases);
 
             return (
               <li key={item.index}>
-                <h3>{item.Province_State}</h3>
+                <h3 onClick={handleChange}>{item.Province_State}</h3>
                 <p>Cases: {numWithCommas(numCases)}</p>
                 <p>Deaths: {numWithCommas(numDeaths)}</p>
                 {numRecovered ? (
