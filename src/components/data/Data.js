@@ -28,8 +28,6 @@ const Data = () => {
     getData();
   }, []);
 
-  console.log(stateName);
-
   return (
     <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
