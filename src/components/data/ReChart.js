@@ -50,7 +50,7 @@ const ReChart = ({ info, dataKey, color }) => {
   return (
     <div>
       <LineChart
-        width={900}
+        width={1100}
         height={500}
         data={data}
         margin={{ top: 5, right: 5, left: 10, bottom: 5 }}

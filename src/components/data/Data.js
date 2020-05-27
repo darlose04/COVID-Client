@@ -3,7 +3,7 @@ import axios from "axios";
 import Disclaimer from "../layout/Disclaimer";
 import CDList from "./CDList";
 import StateList from "./StateList";
-import Chart from "./Chart";
+// import Chart from "./Chart";
 import ReChart from "./ReChart";
 import useStateSelected from "../../hooks/useStateSelected";
 
