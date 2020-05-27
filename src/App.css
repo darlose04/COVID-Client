@@ -55,6 +55,11 @@ ul {
 }
 
 .totals {
+  border-bottom: 2px solid black;
+  margin-bottom: 1rem;
+}
+
+.totals ul {
   margin-bottom: 1rem;
 }
 
