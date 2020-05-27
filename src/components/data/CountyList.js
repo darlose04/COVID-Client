@@ -9,7 +9,17 @@ const CountyList = ({ cases, deaths }) => {
 
   const recentDate = dates[dates.length - 1];
 
-  console.log(cases);
+  for (let i = 0; i < cases.length - 2; i++) {
+    let stateObj = {
+      county: cases[i].County,
+      cases: cases[i][recentDate],
+      deaths: deaths[i][recentDate],
+    };
+
+    stateObjects.push(stateObj);
+  }
+
+  // console.log(stateObjects);
 
   return (
     <div>
