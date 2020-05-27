@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import CountyList from "./CountyList";
 
 const StateList = ({ stateName, baseUrl }) => {
   const [stateCases, setStateCases] = useState([]);
@@ -20,13 +21,13 @@ const StateList = ({ stateName, baseUrl }) => {
     getStateData();
   }, [stateName]);
 
-  console.log(stateName);
-  console.log(stateCases);
-
   return (
     <div>
-      <h3>State Counties (If Applicable)</h3>
-      <ul></ul>
+      {stateCases.length > 0 && stateDeaths.length > 0 ? (
+        <CountyList cases={stateCases} deaths={stateDeaths} />
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };
