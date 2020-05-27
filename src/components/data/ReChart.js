@@ -6,9 +6,10 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
+  Legend,
 } from "recharts";
 
-const ReChart = ({ info }) => {
+const ReChart = ({ info, value, color }) => {
   const dateArray = [];
   dateArray.push(Object.keys(info[0]));
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
@@ -49,7 +50,8 @@ const ReChart = ({ info }) => {
         <XAxis dataKey="date" />
         <YAxis />
         <Tooltip />
-        <Line type="monotone" dataKey="value" stroke="rgba(198, 9, 9, 1)" />
+        <Legend verticalAlign="top" />
+        <Line type="monotone" dataKey={value} stroke={color} />
       </LineChart>
     </div>
   );
