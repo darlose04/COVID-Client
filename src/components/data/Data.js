@@ -13,6 +13,7 @@ const Data = () => {
   const [cases, setCases] = useState([]);
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
+  const [stateName, handleChange] = useStateSelected("");
 
   useEffect(() => {
     const getData = async () => {
@@ -27,12 +28,14 @@ const Data = () => {
     getData();
   }, []);
 
+  console.log(stateName);
+
   return (
     <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
           <Disclaimer />
-          <CDList dailyReport={dailyReport} />
+          <CDList handleChange={handleChange} dailyReport={dailyReport} />
           <div className="charts">
             {/* <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" /> */}
             {/* <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" /> */}
