@@ -68,6 +68,14 @@ ul {
   overflow: scroll;
 }
 
+.state-list ul li h3 {
+  cursor: pointer;
+}
+
+.state-list ul li h3:hover {
+  color: red;
+}
+
 .data {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
