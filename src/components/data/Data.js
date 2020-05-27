@@ -5,6 +5,7 @@ import CDList from "./CDList";
 import StateList from "./StateList";
 import Chart from "./Chart";
 import ReChart from "./ReChart";
+import useStateSelected from "../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
 
