@@ -33,9 +33,14 @@ const Data = () => {
           <Disclaimer />
           <CDList dailyReport={dailyReport} />
           <div className="charts">
-            <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
+            {/* <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" /> */}
             {/* <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" /> */}
-            <ReChart info={deaths} />
+            <ReChart
+              info={cases}
+              value="Confirmed Cases"
+              color="rgba(16,30,229,1)"
+            />
+            <ReChart info={deaths} value="Deaths" color="rgba(198,9,9,1)" />
           </div>
           <div className="filler">
             <StateList dailyReport={dailyReport} />
