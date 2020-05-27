@@ -9,28 +9,7 @@ const CountyList = ({ cases, deaths }) => {
 
   const recentDate = dates[dates.length - 1];
 
-  let listLength = 0;
-  while (listLength < cases.length) {
-    let stateObj = {
-      county: "",
-      cases: "",
-      deaths: "",
-    };
-
-    cases.map((county) => {
-      stateObj.county = county.County;
-      stateObj.cases = county[recentDate];
-    });
-
-    deaths.map((county) => {
-      stateObj.deaths = county[recentDate];
-    });
-
-    stateObjects.push(stateObj);
-
-    listLength++;
-  }
-  console.log(stateObjects);
+  console.log(cases);
 
   return (
     <div>
