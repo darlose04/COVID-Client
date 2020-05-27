@@ -1,6 +1,10 @@
 import React from "react";
 
 const CountyList = ({ cases, deaths }) => {
+  const numWithCommas = (num) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
   let stateObjects = [];
 
   const dateArray = [];
@@ -12,8 +16,8 @@ const CountyList = ({ cases, deaths }) => {
   for (let i = 0; i < cases.length - 2; i++) {
     let stateObj = {
       county: cases[i].County,
-      cases: cases[i][recentDate],
-      deaths: deaths[i][recentDate],
+      cases: numWithCommas(cases[i][recentDate]),
+      deaths: numWithCommas(deaths[i][recentDate]),
     };
 
     stateObjects.push(stateObj);
@@ -23,8 +27,16 @@ const CountyList = ({ cases, deaths }) => {
 
   return (
     <div>
-      <h3>State Counties (If Applicable)</h3>
-      <ul></ul>
+      <h2>State Counties (If Applicable)</h2>
+      <ul>
+        {stateObjects.map((county) => (
+          <li>
+            <h3>{county.county}</h3>
+            <p>Cases: {county.cases}</p>
+            <p>Deaths: {county.deaths}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
