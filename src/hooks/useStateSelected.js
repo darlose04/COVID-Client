@@ -4,7 +4,7 @@ function useStateSelected(initialVal = "") {
   const [stateName, setStateName] = useState(initialVal);
 
   const handleChange = (e) => {
-    setStateName(e.target.value);
+    setStateName(e.target.innerText);
   };
 
   return [stateName, handleChange];
