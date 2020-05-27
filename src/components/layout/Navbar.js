@@ -15,7 +15,7 @@ const Navbar = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="#">United States</Link>
+              <Link to="/usdata">United States</Link>
             </li>
             <li>
               <Link to="#">Global</Link>
