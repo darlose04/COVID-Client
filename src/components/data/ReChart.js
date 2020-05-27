@@ -29,8 +29,8 @@ const ReChart = ({ info, dataKey, color }) => {
     infoArray.push(numInfo);
   });
 
-  console.log("InfoArray");
-  console.log(infoArray);
+  // console.log("InfoArray");
+  // console.log(infoArray);
 
   let data = [];
   // chartLabel.forEach((label, i) => (data[label] = infoArray[i]));
@@ -44,8 +44,8 @@ const ReChart = ({ info, dataKey, color }) => {
     data.push(dataObj);
   }
 
-  console.log(dataKey);
-  console.log(data);
+  // console.log(dataKey);
+  // console.log(data);
 
   return (
     <div>
