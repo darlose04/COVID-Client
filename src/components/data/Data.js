@@ -37,10 +37,10 @@ const Data = () => {
             {/* <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" /> */}
             <ReChart
               info={cases}
-              value="Confirmed Cases"
+              dataKey="Confirmed Cases"
               color="rgba(16,30,229,1)"
             />
-            <ReChart info={deaths} value="Deaths" color="rgba(198,9,9,1)" />
+            <ReChart info={deaths} dataKey="Deaths" color="rgba(198,9,9,1)" />
           </div>
           <div className="filler">
             <StateList dailyReport={dailyReport} />

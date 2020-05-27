@@ -9,7 +9,7 @@ import {
   Legend,
 } from "recharts";
 
-const ReChart = ({ info, value, color }) => {
+const ReChart = ({ info, dataKey, color }) => {
   const dateArray = [];
   dateArray.push(Object.keys(info[0]));
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
@@ -36,7 +36,8 @@ const ReChart = ({ info, value, color }) => {
     data.push(dataObj);
   }
 
-  console.log(data);
+  // console.log(value);
+  // console.log(data);
 
   return (
     <div>
@@ -51,7 +52,7 @@ const ReChart = ({ info, value, color }) => {
         <YAxis />
         <Tooltip />
         <Legend verticalAlign="top" />
-        <Line type="monotone" dataKey={value} stroke={color} />
+        <Line name={dataKey} type="monotone" dataKey="value" stroke={color} />
       </LineChart>
     </div>
   );
