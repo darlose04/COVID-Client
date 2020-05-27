@@ -5,7 +5,7 @@ const Disclaimer = () => {
     <div className="disclaimer">
       <h1>THE INFORMATION PRESENTED HERE IS NOT UP TO DATE!</h1>
       <h3>
-        In order to get up to date statistics, visit this link:{" "}
+        In order to get more recent statistics, visit this link:{" "}
         <a
           href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
           target="_blank"
