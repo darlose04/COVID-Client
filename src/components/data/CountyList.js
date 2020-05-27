@@ -1,6 +1,6 @@
 import React from "react";
 
-const CountyList = ({ cases, deaths }) => {
+const CountyList = ({ stateName, cases, deaths }) => {
   const numWithCommas = (num) => {
     return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -27,7 +27,7 @@ const CountyList = ({ cases, deaths }) => {
 
   return (
     <div>
-      <h2>State Counties (If Applicable)</h2>
+      <h1>{stateName}</h1>
       <ul>
         {stateObjects.map((county) => (
           <li>

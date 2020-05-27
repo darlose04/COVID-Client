@@ -24,7 +24,11 @@ const StateList = ({ stateName, baseUrl }) => {
   return (
     <div>
       {stateCases.length > 0 && stateDeaths.length > 0 ? (
-        <CountyList cases={stateCases} deaths={stateDeaths} />
+        <CountyList
+          stateName={stateName}
+          cases={stateCases}
+          deaths={stateDeaths}
+        />
       ) : (
         <div></div>
       )}
