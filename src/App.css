@@ -64,11 +64,20 @@ ul {
 
 .data .disclaimer {
   grid-column: 1 / span 5;
+  background-color: red;
+  color: #fff;
   padding: 1rem;
-  border: solid red 2px;
   text-align: center;
   align-items: center;
   margin: 1rem;
+}
+
+.data .disclaimer h3 a {
+  color: #fff;
+}
+
+.data .disclaimer h3 a:hover {
+  color: #000;
 }
 
 .charts {
