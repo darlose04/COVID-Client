@@ -54,20 +54,35 @@ ul {
   background: #f3f3f3;
 }
 
+/* Totals Section */
 .totals {
-  border-bottom: 2px solid black;
   margin-bottom: 1rem;
   padding-left: 1rem;
+}
+
+.totals h2 {
+  border-bottom: 2px solid black;
+  margin-bottom: 0.5rem;
 }
 
 .totals ul {
   margin-bottom: 1rem;
 }
 
+/* State List */
 .state-list {
   max-height: 900px;
   overflow: scroll;
   padding-left: 1rem;
+}
+
+.state-list h2 {
+  border-bottom: 2px solid black;
+  margin-bottom: 0.5rem;
+}
+
+.state-list ul li {
+  border-bottom: 1px dotted black;
 }
 
 .state-list ul li h3 {
@@ -106,10 +121,22 @@ ul {
   grid-column: 5 / span 1;
 }
 
+/* County List */
 .county-list {
   background: #f3f3f3;
   margin-right: 1rem;
   padding: 1rem;
 }
 
-/* County List */
+.county-list div div h1 {
+  border-bottom: 2px solid black;
+}
+
+.county-list div div ul li {
+  margin: 0.5rem 0;
+  border-bottom: 1px dotted black;
+}
+
+.county-list div div ul li:last-child {
+  border: none;
+}
