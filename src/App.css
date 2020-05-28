@@ -141,15 +141,15 @@ ul {
   overflow: scroll;
 }
 
-.county-list div div h1 {
+.county-list div h1 {
   border-bottom: 2px solid black;
 }
 
-.county-list div div ul li {
+.county-list div ul li {
   margin: 0.5rem 0;
   border-bottom: 1px dotted black;
 }
 
-.county-list div div ul li:last-child {
+.county-list div ul li:last-child {
   border: none;
 }
