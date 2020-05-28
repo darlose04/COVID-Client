@@ -9,6 +9,7 @@ const Disclaimer = () => {
         <a
           href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
           target="_blank"
+          rel="noopener noreferrer"
         >
           COVID-19 Dashboard by the Center for Systems Science and Engineering
           (CSSE) at Johns Hopkins University (JHU)
