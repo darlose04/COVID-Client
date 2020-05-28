@@ -51,8 +51,25 @@ const Data = () => {
           <Disclaimer />
           <CDList handleChange={handleChange} dailyReport={dailyReport} />
           <div className="charts">
-            <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
-            <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
+            {stateName === "" ? (
+              <div>
+                <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
+                <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
+              </div>
+            ) : (
+              <div>
+                <Chart
+                  info={stateCountyCasesArr}
+                  label={stateName + " Cases"}
+                  color="rgba(16,30,229,1)"
+                />
+                <Chart
+                  info={stateCountyDeathsArr}
+                  label={stateName + " Deaths"}
+                  color="rgba(198,9,9,1)"
+                />
+              </div>
+            )}
           </div>
           <div className="county-list">
             {stateName !== "" ? (
