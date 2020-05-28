@@ -22,7 +22,11 @@ const StateList = ({ stateName, cases, deaths }) => {
 
   return (
     <div>
-      <CountyList cases={stateCountyCasesArr} deaths={stateCountyDeathsArr} />
+      <CountyList
+        stateName={stateName}
+        cases={stateCountyCasesArr}
+        deaths={stateCountyDeathsArr}
+      />
     </div>
   );
 };
