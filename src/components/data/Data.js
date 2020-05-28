@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Disclaimer from "../layout/Disclaimer";
 import CDList from "./CDList";
-import StateList from "./StateList";
+import CountyList from "./CountyList";
 import Chart from "./Chart";
 // import ReChart from "./ReChart";
 import useStateSelected from "../../hooks/useStateSelected";
@@ -28,6 +28,23 @@ const Data = () => {
     getData();
   }, []);
 
+  /* Sort cases and deaths by stateName here to pass to StateList, CountyList, and StateChart components*/
+
+  let stateCountyCasesArr = [];
+  let stateCountyDeathsArr = [];
+
+  cases.map((obj) => {
+    if (obj.State === stateName) {
+      stateCountyCasesArr.push(obj);
+    }
+  });
+
+  deaths.map((obj) => {
+    if (obj.State === stateName) {
+      stateCountyDeathsArr.push(obj);
+    }
+  });
+
   return (
     <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
@@ -46,7 +63,11 @@ const Data = () => {
           </div>
           <div className="county-list">
             {stateName !== "" ? (
-              <StateList stateName={stateName} cases={cases} deaths={deaths} />
+              <CountyList
+                stateName={stateName}
+                cases={stateCountyCasesArr}
+                deaths={stateCountyDeathsArr}
+              />
             ) : (
               <div>
                 <h3>
