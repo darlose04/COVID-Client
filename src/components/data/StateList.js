@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import CountyList from "./CountyList";
 
-const StateList = ({ stateName, baseUrl }) => {
+const StateList = ({ stateName, baseUrl, cases, deaths }) => {
   const [stateCases, setStateCases] = useState([]);
   const [stateDeaths, setStateDeaths] = useState([]);
 
