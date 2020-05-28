@@ -50,14 +50,14 @@ ul {
 /* Data */
 .list-data {
   margin-left: 1rem;
-  padding: 1rem 0;
+  padding: 1rem 1rem;
   background: #f3f3f3;
 }
 
 /* Totals Section */
 .totals {
   margin-bottom: 1rem;
-  padding-left: 1rem;
+  /* padding: 0 1rem; */
 }
 
 .totals h2 {
@@ -73,7 +73,6 @@ ul {
 .state-list {
   max-height: 900px;
   overflow: scroll;
-  padding-left: 1rem;
 }
 
 .state-list h2 {
