@@ -46,12 +46,7 @@ const Data = () => {
           </div>
           <div className="county-list">
             {stateName !== "" ? (
-              <StateList
-                baseUrl={baseUrl}
-                stateName={stateName}
-                cases={cases}
-                deaths={deaths}
-              />
+              <StateList stateName={stateName} cases={cases} deaths={deaths} />
             ) : (
               <div>
                 <h3>
