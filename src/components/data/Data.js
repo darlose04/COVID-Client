@@ -45,7 +45,7 @@ const Data = () => {
             <ReChart info={deaths} dataKey="Deaths" color="rgba(198,9,9,1)" />
           </div>
           <div className="county-list">
-            {stateName != "" ? (
+            {stateName !== "" ? (
               <StateList
                 baseUrl={baseUrl}
                 dailyReport={dailyReport}

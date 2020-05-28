@@ -30,7 +30,7 @@ const CountyList = ({ stateName, cases, deaths }) => {
       <h1>{stateName}</h1>
       <ul>
         {stateObjects.map((county) => (
-          <li>
+          <li key={county.UID}>
             <h3>{county.county}</h3>
             <p>Cases: {county.cases}</p>
             <p>Deaths: {county.deaths}</p>
