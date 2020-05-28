@@ -108,6 +108,7 @@ ul {
 
 .state-list ul li {
   border-bottom: 1px dotted black;
+  margin: 0.5rem 0;
 }
 
 .state-list ul li h3 {
