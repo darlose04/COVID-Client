@@ -111,6 +111,10 @@ ul {
   margin: 0.5rem 0;
 }
 
+.state-list ul li:last-child {
+  border-bottom: none;
+}
+
 .state-list ul li h3 {
   cursor: pointer;
 }
