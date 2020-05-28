@@ -15,6 +15,7 @@ const CountyList = ({ stateName, cases, deaths }) => {
 
   for (let i = 0; i < cases.length - 2; i++) {
     let stateObj = {
+      id: cases[i].UID,
       county: cases[i].County,
       cases: numWithCommas(cases[i][recentDate]),
       deaths: numWithCommas(deaths[i][recentDate]),
@@ -23,14 +24,12 @@ const CountyList = ({ stateName, cases, deaths }) => {
     stateObjects.push(stateObj);
   }
 
-  // console.log(stateObjects);
-
   return (
     <div>
       <h1>{stateName}</h1>
       <ul>
         {stateObjects.map((county) => (
-          <li key={county.UID}>
+          <li key={county.id}>
             <h3>{county.county}</h3>
             <p>Cases: {county.cases}</p>
             <p>Deaths: {county.deaths}</p>
