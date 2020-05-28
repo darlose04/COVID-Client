@@ -3,8 +3,8 @@ import axios from "axios";
 import Disclaimer from "../layout/Disclaimer";
 import CDList from "./CDList";
 import StateList from "./StateList";
-// import Chart from "./Chart";
-import ReChart from "./ReChart";
+import Chart from "./Chart";
+// import ReChart from "./ReChart";
 import useStateSelected from "../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
@@ -35,21 +35,22 @@ const Data = () => {
           <Disclaimer />
           <CDList handleChange={handleChange} dailyReport={dailyReport} />
           <div className="charts">
-            {/* <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" /> */}
-            {/* <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" /> */}
-            <ReChart
+            <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
+            <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
+            {/* <ReChart
               info={cases}
               dataKey="Confirmed Cases"
               color="rgba(16,30,229,1)"
-            />
-            <ReChart info={deaths} dataKey="Deaths" color="rgba(198,9,9,1)" />
+            /> */}
+            {/* <ReChart info={deaths} dataKey="Deaths" color="rgba(198,9,9,1)" /> */}
           </div>
           <div className="county-list">
             {stateName !== "" ? (
               <StateList
                 baseUrl={baseUrl}
-                dailyReport={dailyReport}
                 stateName={stateName}
+                cases={cases}
+                deaths={deaths}
               />
             ) : (
               <div>
