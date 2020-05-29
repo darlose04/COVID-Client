@@ -1,4 +1,5 @@
 import React from "react";
+import numWithCommas from "../../numWithCommas";
 
 const Totals = ({ dailyReport }) => {
   let totalCases = 0;
@@ -16,10 +17,6 @@ const Totals = ({ dailyReport }) => {
     totalTested += state.People_Tested;
     totalRecovered += state.Recovered;
   });
-
-  const numWithCommas = (num) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
 
   return (
     <div className="totals">
