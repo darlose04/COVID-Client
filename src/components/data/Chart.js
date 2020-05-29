@@ -2,6 +2,7 @@ import React from "react";
 import { Line } from "react-chartjs-2";
 
 const Chart = ({ info, label, color }) => {
+  console.log(info);
   // create date array for chart label (x axis)
   const dateArray = [];
   dateArray.push(Object.keys(info[0]));
@@ -12,7 +13,7 @@ const Chart = ({ info, label, color }) => {
   chartLabel.map((date) => {
     let numInfo = 0;
     info.map((item) => {
-      numInfo += item[date];
+      numInfo += item[`${date}`];
     });
     infoArray.push(numInfo);
   });

@@ -44,6 +44,12 @@ const Data = () => {
     }
   });
 
+  // removing the "Unassigned" and "Out of 'State'" county values from each state
+  // stateCountyCasesArr.pop();
+  // stateCountyCasesArr.pop();
+  // stateCountyDeathsArr.pop();
+  // stateCountyDeathsArr.pop();
+
   return (
     <div className="data-wrapper">
       {cases.length > 0 && deaths.length > 0 ? (
