@@ -1,10 +1,7 @@
 import React from "react";
+import numWithCommas from "../../numWithCommas";
 
 const CountyList = ({ stateName, cases, deaths }) => {
-  const numWithCommas = (num) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   let stateObjects = [];
 
   const dateArray = [];

@@ -1,11 +1,8 @@
 import React from "react";
 import Totals from "./Totals";
+import numWithCommas from "../../numWithCommas";
 
 const CDList = ({ dailyReport, handleChange }) => {
-  const numWithCommas = (num) => {
-    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  };
-
   return (
     <div className="list-data">
       <Totals dailyReport={dailyReport} />
