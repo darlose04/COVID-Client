@@ -1,6 +1,6 @@
 import React from "react";
 
-const BarChart = () => {
+const StateBarChart = () => {
   return (
     <div>
       <h1>There will be a bar chart of state data here</h1>
@@ -8,4 +8,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default StateBarChart;
