@@ -88,7 +88,7 @@ const Data = () => {
               <div>
                 <h3>
                   Click on a state name to the left to display statistics
-                  related to that state's counties
+                  related to that state's counties.
                 </h3>
               </div>
             )}
