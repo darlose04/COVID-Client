@@ -20,7 +20,7 @@ const CDList = ({ dailyReport, handleChange }) => {
                 <p>Cases: {numWithCommas(numCases)}</p>
                 <p>Deaths: {numWithCommas(numDeaths)}</p>
                 {numRecovered ? (
-                  <p>Recovered:{numWithCommas(numRecovered)}</p>
+                  <p>Recovered: {numWithCommas(numRecovered)}</p>
                 ) : (
                   <p>Recovered: {item.Recovered}</p>
                 )}
