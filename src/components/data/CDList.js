@@ -5,7 +5,7 @@ import numWithCommas from "../../numWithCommas";
 const CDList = ({ dailyReport, handleChange }) => {
   return (
     <div className="list-data">
-      <Totals dailyReport={dailyReport} />
+      <Totals dailyReport={dailyReport} handleChange={handleChange} />
       <div className="state-list">
         <h2>States / Territories</h2>
         <ul>
