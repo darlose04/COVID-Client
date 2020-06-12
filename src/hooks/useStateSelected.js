@@ -4,7 +4,11 @@ function useStateSelected(initialVal = "") {
   const [stateName, setStateName] = useState(initialVal);
 
   const handleChange = (e) => {
-    setStateName(e.target.innerText);
+    if (e.target.innerText === "U.S. Totals") {
+      setStateName("");
+    } else {
+      setStateName(e.target.innerText);
+    }
   };
 
   return [stateName, handleChange];
