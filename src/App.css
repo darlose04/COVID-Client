@@ -55,6 +55,10 @@ ul {
 }
 
 /* Totals Section */
+.US-Totals:hover {
+  cursor: pointer;
+  color: red;
+}
 
 .data {
   display: grid;
