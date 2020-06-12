@@ -8,10 +8,16 @@ const StateBarChart = ({ dailyReport }) => {
   console.log(dailyReport);
 
   dailyReport.map((report) => {
-    statesArr.push(report.Province_State);
-    casesArr.push(report.Confirmed);
-    deathsArr.push(report.Deaths);
+    // if (report.Country_Region === "US") {
+    //   statesArr.push(report.Province_State);
+    //   casesArr.push(report.Confirmed);
+    //   deathsArr.push(report.Deaths);
+    // }
+
+    console.log(report.Country_Region);
   });
+
+  console.log(statesArr);
 
   const data = {
     labels: statesArr,
