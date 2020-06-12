@@ -1,7 +1,7 @@
 import React from "react";
 import numWithCommas from "../../numWithCommas";
 
-const Totals = ({ dailyReport }) => {
+const Totals = ({ dailyReport, handleChange }) => {
   let totalCases = 0;
   let totalDeaths = 0;
   let totalActive = 0;
@@ -20,7 +20,9 @@ const Totals = ({ dailyReport }) => {
 
   return (
     <div className="totals">
-      <h2>U.S. Totals</h2>
+      <h2 className="US-Totals" onClick={handleChange}>
+        U.S. Totals
+      </h2>
       <ul>
         <li>Confirmed: {numWithCommas(totalCases)}</li>
         <li>Deaths: {numWithCommas(totalDeaths)}</li>
