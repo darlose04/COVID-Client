@@ -11,8 +11,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/usdata" render={() => <Data />} />
+        {/* <Route exact path="/" render={() => <Home />} /> */}
+        <Route exact path="/" render={() => <Data />} />
         <Route exact path="/about" render={() => <About />} />
       </Switch>
     </div>
