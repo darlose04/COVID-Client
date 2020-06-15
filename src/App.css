@@ -167,3 +167,8 @@ ul {
 .county-list div ul li:last-child {
   border: none;
 }
+
+/* State Bar Chart */
+.state-bar-chart {
+  margin-bottom: 2rem;
+}
