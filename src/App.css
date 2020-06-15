@@ -67,6 +67,10 @@ ul {
 }
 
 /* US Data */
+.data-wrapper {
+  width: 1400px;
+  margin: auto;
+}
 
 .data {
   display: grid;
