@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "./Navbar.css";
 
 const Navbar = () => {
   return (
@@ -11,11 +10,11 @@ const Navbar = () => {
         </h1>
         <nav>
           <ul>
-            <li>
+            {/* <li>
               <Link to="/">Home</Link>
-            </li>
+            </li> */}
             <li>
-              <Link to="/usdata">United States</Link>
+              <Link to="/">United States</Link>
             </li>
             <li>
               <Link to="#">Global</Link>
