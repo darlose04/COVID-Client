@@ -66,21 +66,21 @@ ul {
   grid-gap: 1rem;
 }
 
-.data .disclaimer {
+.disclaimer {
   grid-column: 1 / span 5;
   background-color: red;
   color: #fff;
   padding: 1rem;
   text-align: center;
   align-items: center;
-  margin: 1rem 1rem 0 1rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
-.data .disclaimer h3 a {
+.disclaimer h3 a {
   color: #fff;
 }
 
-.data .disclaimer h3 a:hover {
+.disclaimer h3 a:hover {
   color: #000;
 }
 

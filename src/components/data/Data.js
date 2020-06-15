@@ -53,9 +53,9 @@ const Data = () => {
 
   return (
     <div className="data-wrapper">
+      <Disclaimer />
       {cases.length > 0 && deaths.length > 0 ? (
         <div className="data">
-          <Disclaimer />
           <CDList handleChange={handleChange} dailyReport={dailyReport} />
           <div className="charts">
             {stateName === "" ? (
