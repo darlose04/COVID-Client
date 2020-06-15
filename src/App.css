@@ -138,7 +138,7 @@ ul {
 }
 
 .charts {
-  padding: 1rem;
+  padding: 1rem 0rem;
   grid-column: 2 / span 3;
   max-height: 1000px;
 }
