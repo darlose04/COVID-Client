@@ -46,7 +46,7 @@ const Chart = ({ info, label, color }) => {
 
   return (
     <div className="line-chart">
-      <Line data={data} />
+      <Line data={data} options={{ maintainAspectRatio: false }} />
     </div>
   );
 };

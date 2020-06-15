@@ -47,13 +47,6 @@ ul {
   display: flex;
 }
 
-/* Data */
-.list-data {
-  margin-left: 1rem;
-  padding: 1rem 1rem;
-  /* background: #f3f3f3; */
-}
-
 /* Disclaimer */
 .disclaimer {
   grid-column: 1 / span 5;
@@ -73,31 +66,27 @@ ul {
   color: #000;
 }
 
-/* Totals Section */
-.US-Totals:hover {
-  cursor: pointer;
-  color: red;
-}
+/* US Data */
 
 .data {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
+  max-height: 1000px;
 }
 
-.charts {
+.list-data {
+  margin-left: 1rem;
+  padding: 1rem 1rem;
   /* background: #f3f3f3; */
-  padding: 1rem;
-  grid-column: 2 / span 3;
+  max-height: 1000px;
 }
 
-.data:last-child {
-  grid-column: 5 / span 1;
-}
-
+/* Totals Section */
 .totals {
   margin-bottom: 1rem;
   border-bottom: 1px dotted black;
+  height: 15%;
 }
 
 .totals h2 {
@@ -109,9 +98,14 @@ ul {
   margin-bottom: 1rem;
 }
 
+.US-Totals:hover {
+  cursor: pointer;
+  color: red;
+}
+
 /* State List */
 .state-list {
-  max-height: 940px;
+  height: 85%;
   overflow: scroll;
 }
 
@@ -135,6 +129,17 @@ ul {
 
 .state-list ul li h3:hover {
   color: red;
+}
+
+.charts {
+  /* background: #f3f3f3; */
+  padding: 1rem;
+  grid-column: 2 / span 3;
+  max-height: 1000px;
+}
+
+.data:last-child {
+  grid-column: 5 / span 1;
 }
 
 /* County List */
