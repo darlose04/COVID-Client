@@ -85,7 +85,6 @@ ul {
 .list-data {
   margin-left: 1rem;
   padding: 1rem 1rem;
-  /* background: #f3f3f3; */
   max-height: 1000px;
 }
 
@@ -139,7 +138,6 @@ ul {
 }
 
 .charts {
-  /* background: #f3f3f3; */
   padding: 1rem;
   grid-column: 2 / span 3;
   max-height: 1000px;
@@ -151,7 +149,6 @@ ul {
 
 /* County List */
 .county-list {
-  /* background: #f3f3f3; */
   margin-right: 1rem;
   padding: 1rem;
   max-height: 1000px;
