@@ -19,17 +19,19 @@ ul {
 }
 
 /* Navbar */
-.logo {
-  margin-left: 15px;
-}
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  width: 100%;
+  width: 1400px;
   height: 70px;
+  margin: auto;
+}
+
+.navbar .logo {
+  margin-left: 15px;
 }
 
 .navbar a {
