@@ -54,18 +54,7 @@ ul {
   /* background: #f3f3f3; */
 }
 
-/* Totals Section */
-.US-Totals:hover {
-  cursor: pointer;
-  color: red;
-}
-
-.data {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-}
-
+/* Disclaimer */
 .disclaimer {
   grid-column: 1 / span 5;
   background-color: red;
@@ -82,6 +71,18 @@ ul {
 
 .disclaimer h3 a:hover {
   color: #000;
+}
+
+/* Totals Section */
+.US-Totals:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
 }
 
 .charts {
