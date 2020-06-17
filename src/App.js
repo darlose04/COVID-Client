@@ -13,6 +13,7 @@ function App() {
       <Switch>
         {/* <Route exact path="/" render={() => <Home />} /> */}
         <Route exact path="/" render={() => <Data />} />
+        <Route exact path="/usmap" render={() => <USMap />} />
         <Route exact path="/about" render={() => <About />} />
       </Switch>
     </div>
