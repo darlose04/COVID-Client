@@ -17,7 +17,7 @@ const Navbar = () => {
               <Link to="/">United States</Link>
             </li>
             <li>
-              <Link to="/usmap">US Map</Link>
+              <Link to="/usmap">U.S. Map</Link>
             </li>
             <li>
               <Link to="/about">About</Link>
