@@ -27,12 +27,6 @@ const Data = () => {
       setDailyReport(dailyReport.data);
     };
 
-    // const getData = () => {
-    //   fetch(`${baseUrl}/coronacases/`)
-    //     .then((response) => response.json())
-    //     .then((data) => console.log(data));
-    // };
-
     getData();
   }, []);
 
