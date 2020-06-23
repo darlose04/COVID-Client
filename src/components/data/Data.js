@@ -17,10 +17,11 @@ const Data = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const cases = await axios.get(`${baseUrl}/coronacases`);
-      setCases(cases.data);
-      const deaths = await axios.get(`${baseUrl}/coronadeaths`);
-      setDeaths(deaths.data);
+      const caseRequests = await axios.get(`${baseUrl}/coronacases`);
+      console.log(caseRequests);
+      setCases(caseRequests.data);
+      const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
+      setDeaths(deathRequests.data);
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       setDailyReport(dailyReport.data);
     };
@@ -33,6 +34,8 @@ const Data = () => {
   let stateCountyCasesArr = [];
   let stateCountyDeathsArr = [];
 
+  // console.log(cases);
+
   cases.map((obj) => {
     if (obj.State === stateName) {
       stateCountyCasesArr.push(obj);
@@ -44,6 +47,9 @@ const Data = () => {
       stateCountyDeathsArr.push(obj);
     }
   });
+
+  // console.log(stateCountyCasesArr);
+  // console.log(stateName);
 
   // removing the "Unassigned" and "Out of 'State'" county values from each state
   stateCountyCasesArr.pop();

@@ -5,7 +5,7 @@ const Chart = ({ info, label, color }) => {
   // create date array for chart label (x axis)
   const dateArray = Object.keys(info[0]);
   // dateArray.push(Object.keys(info[0]));
-  console.log(dateArray);
+  // console.log(dateArray);
 
   const chartLabel = dateArray.slice(7, dateArray.length);
 
