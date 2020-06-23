@@ -18,13 +18,20 @@ const Data = () => {
   useEffect(() => {
     const getData = async () => {
       const caseRequests = await axios.get(`${baseUrl}/coronacases`);
-      console.log(caseRequests);
+      // console.log(caseRequests);
       setCases(caseRequests.data);
       const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
+      console.log(deathRequests);
       setDeaths(deathRequests.data);
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       setDailyReport(dailyReport.data);
     };
+
+    // const getData = () => {
+    //   fetch(`${baseUrl}/coronacases/`)
+    //     .then((response) => response.json())
+    //     .then((data) => console.log(data));
+    // };
 
     getData();
   }, []);
