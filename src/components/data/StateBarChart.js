@@ -5,7 +5,7 @@ const StateBarChart = ({ dailyReport }) => {
   const statesArr = [];
   const casesArr = [];
   const deathsArr = [];
-  console.log(dailyReport);
+  // console.log(dailyReport);
 
   dailyReport.map((report) => {
     statesArr.push(report.Province_State);
@@ -13,7 +13,7 @@ const StateBarChart = ({ dailyReport }) => {
     deathsArr.push(report.Deaths);
   });
 
-  console.log(statesArr);
+  // console.log(statesArr);
 
   const data = {
     labels: statesArr,
