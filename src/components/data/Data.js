@@ -53,6 +53,7 @@ const Data = () => {
     }
   });
 
+  console.log("State County Cases Array");
   console.log(stateCountyCasesArr);
   console.log(stateName);
 
