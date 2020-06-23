@@ -21,9 +21,9 @@ const Data = () => {
       // console.log(caseRequests);
       setCases(caseRequests.data);
       const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
-      console.log(deathRequests);
       setDeaths(deathRequests.data);
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
+      // console.log(dailyReport);
       setDailyReport(dailyReport.data);
     };
 
@@ -41,8 +41,6 @@ const Data = () => {
   let stateCountyCasesArr = [];
   let stateCountyDeathsArr = [];
 
-  // console.log(cases);
-
   cases.map((obj) => {
     if (obj.State === stateName) {
       stateCountyCasesArr.push(obj);
@@ -55,14 +53,23 @@ const Data = () => {
     }
   });
 
-  // console.log(stateCountyCasesArr);
-  // console.log(stateName);
+  console.log(stateCountyCasesArr);
+  console.log(stateName);
 
-  // removing the "Unassigned" and "Out of 'State'" county values from each state
-  stateCountyCasesArr.pop();
-  stateCountyCasesArr.pop();
-  stateCountyDeathsArr.pop();
-  stateCountyDeathsArr.pop();
+  // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
+  if (
+    stateName !== "American Samoa" ||
+    stateName !== "Guam" ||
+    stateName !== "Northern Mariana Islands" ||
+    stateName !== "Puerto Rico" ||
+    stateName !== "Virgin Islands" ||
+    stateName !== "Grand Princess"
+  ) {
+    stateCountyCasesArr.pop();
+    stateCountyCasesArr.pop();
+    stateCountyDeathsArr.pop();
+    stateCountyDeathsArr.pop();
+  }
 
   return (
     <div className="data-wrapper">
