@@ -47,10 +47,6 @@ const Data = () => {
     }
   });
 
-  console.log("State County Cases Array");
-  console.log(stateCountyCasesArr);
-  console.log(stateName);
-
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
   if (
     stateName !== "American Samoa" ||
@@ -65,6 +61,10 @@ const Data = () => {
     stateCountyDeathsArr.pop();
     stateCountyDeathsArr.pop();
   }
+
+  console.log("State County Cases Array");
+  console.log(stateCountyCasesArr);
+  console.log(stateName);
 
   return (
     <div className="data-wrapper">

@@ -6,7 +6,6 @@ const Chart = ({ info, label, color }) => {
 
   const dateArray = [];
   dateArray.push(Object.keys(info[0]));
-  // console.log(dateArray);
 
   const chartLabel = dateArray[0].slice(7, dateArray[0].length);
 
