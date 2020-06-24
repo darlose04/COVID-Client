@@ -48,19 +48,11 @@ const Data = () => {
   });
 
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
-  if (
-    stateName !== "American Samoa" ||
-    stateName !== "Guam" ||
-    stateName !== "Northern Mariana Islands" ||
-    stateName !== "Puerto Rico" ||
-    stateName !== "Virgin Islands" ||
-    stateName !== "Grand Princess"
-  ) {
-    stateCountyCasesArr.pop();
-    stateCountyCasesArr.pop();
-    stateCountyDeathsArr.pop();
-    stateCountyDeathsArr.pop();
-  }
+
+  stateCountyCasesArr.pop();
+  stateCountyCasesArr.pop();
+  stateCountyDeathsArr.pop();
+  stateCountyDeathsArr.pop();
 
   return (
     <div className="data-wrapper">
