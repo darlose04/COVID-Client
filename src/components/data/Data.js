@@ -14,8 +14,6 @@ const Data = () => {
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
   const [stateName, handleChange] = useStateSelected("");
-  const [guamCases, setGuamCases] = useState([]);
-  const [guamDeaths, setGuamDeaths] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -63,10 +61,6 @@ const Data = () => {
     stateCountyDeathsArr.pop();
     stateCountyDeathsArr.pop();
   }
-
-  // console.log("State County Cases Array");
-  // console.log(stateCountyCasesArr);
-  // console.log(stateName);
 
   return (
     <div className="data-wrapper">
