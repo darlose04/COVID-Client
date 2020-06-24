@@ -14,6 +14,8 @@ const Data = () => {
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
   const [stateName, handleChange] = useStateSelected("");
+  const [guamCases, setGuamCases] = useState([]);
+  const [guamDeaths, setGuamDeaths] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -25,6 +27,10 @@ const Data = () => {
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       // console.log(dailyReport);
       setDailyReport(dailyReport.data);
+      const guamC = await axios.get(`${baseUrl}/coronacases/states/Guam`);
+      setGuamCases(guamC.data);
+      const guamD = await axios.get(`${baseUrl}/coronadeaths/states/Guam`);
+      setGuamDeaths(guamD.data);
     };
 
     getData();
@@ -35,17 +41,22 @@ const Data = () => {
   let stateCountyCasesArr = [];
   let stateCountyDeathsArr = [];
 
-  cases.map((obj) => {
-    if (obj.State === stateName) {
-      stateCountyCasesArr.push(obj);
-    }
-  });
+  if (stateName === "Guam") {
+    stateCountyCasesArr = guamCases;
+    stateCountyDeathsArr = guamDeaths;
+  } else {
+    cases.map((obj) => {
+      if (obj.State === stateName) {
+        stateCountyCasesArr.push(obj);
+      }
+    });
 
-  deaths.map((obj) => {
-    if (obj.State === stateName) {
-      stateCountyDeathsArr.push(obj);
-    }
-  });
+    deaths.map((obj) => {
+      if (obj.State === stateName) {
+        stateCountyDeathsArr.push(obj);
+      }
+    });
+  }
 
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
   if (
