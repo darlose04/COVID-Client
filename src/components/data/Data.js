@@ -35,38 +35,31 @@ const Data = () => {
   let stateCountyCasesArr = [];
   let stateCountyDeathsArr = [];
 
-  if (stateName === "Guam") {
-    let guamCases = cases.find((obj) => obj.State === "Guam");
-    stateCountyCasesArr.push(guamCases);
-    let guamDeaths = deaths.find((obj) => obj.State === "Guam");
-    stateCountyDeathsArr.push(guamDeaths);
-  } else {
-    cases.map((obj) => {
-      if (obj.State === stateName) {
-        stateCountyCasesArr.push(obj);
-      }
-    });
-
-    deaths.map((obj) => {
-      if (obj.State === stateName) {
-        stateCountyDeathsArr.push(obj);
-      }
-    });
-
-    // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
-    if (
-      stateName !== "American Samoa" ||
-      stateName !== "Guam" ||
-      stateName !== "Northern Mariana Islands" ||
-      stateName !== "Puerto Rico" ||
-      stateName !== "Virgin Islands" ||
-      stateName !== "Grand Princess"
-    ) {
-      stateCountyCasesArr.pop();
-      stateCountyCasesArr.pop();
-      stateCountyDeathsArr.pop();
-      stateCountyDeathsArr.pop();
+  cases.map((obj) => {
+    if (obj.State === stateName) {
+      stateCountyCasesArr.push(obj);
     }
+  });
+
+  deaths.map((obj) => {
+    if (obj.State === stateName) {
+      stateCountyDeathsArr.push(obj);
+    }
+  });
+
+  // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
+  if (
+    stateName !== "American Samoa" ||
+    stateName !== "Guam" ||
+    stateName !== "Northern Mariana Islands" ||
+    stateName !== "Puerto Rico" ||
+    stateName !== "Virgin Islands" ||
+    stateName !== "Grand Princess"
+  ) {
+    stateCountyCasesArr.pop();
+    stateCountyCasesArr.pop();
+    stateCountyDeathsArr.pop();
+    stateCountyDeathsArr.pop();
   }
 
   return (
