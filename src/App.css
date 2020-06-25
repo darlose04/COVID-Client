@@ -174,6 +174,8 @@ ul {
   margin-bottom: 2rem;
 }
 
+/* About Section */
+
 .about-section {
   margin: auto;
   width: 1000px;
@@ -188,4 +190,14 @@ ul {
 
 .about-section p {
   margin: 0 1rem;
+  line-height: 1.4;
+}
+
+.github-JHU {
+  color: red;
+  text-decoration: none;
+}
+
+.github-JHU:hover {
+  text-decoration: underline;
 }
