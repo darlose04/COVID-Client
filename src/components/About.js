@@ -18,6 +18,27 @@ const About = () => {
         created by the Center for Systems Science and Engineering (CSSE) at
         Johns Hopkins University (JHU).
       </p>
+      <br />
+      <p>
+        The information provided by JHU is gathered from multiple public sources
+        that do not always agree on the statistics. Differences in data and
+        numbers is encountered across many different sites that provide data
+        related to COVID-19. Visiting the Github link above will provide
+        information regarding the different sources that JHU gathers data from.
+      </p>
+      <br />
+      <p>
+        This site uses a public API (
+        <a href="https://www.cov-api.com/">https://www.cov-api.com/</a>) to
+        access the data gathered by JHU. The data provided by the API comes from
+        the Daily Report and Time Series directories in the JHU Github
+        repository. There are some differences in statistics that are presented
+        here. For example, the Daily Report information is displayed in the
+        States / Territories list, while information for the charts is gathered
+        from the Time Series directories. In some cases, such as the information
+        regarding Rhode Island, the numbers do not line up. This is due to a
+        difference in the data that is gathered by JHU.
+      </p>
     </section>
   );
 };
