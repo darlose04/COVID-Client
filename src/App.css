@@ -193,11 +193,12 @@ ul {
   line-height: 1.4;
 }
 
-.github-JHU {
+.about-link {
   color: red;
   text-decoration: none;
 }
 
-.github-JHU:hover {
+.about-link:hover {
   text-decoration: underline;
+  color: #b60006;
 }

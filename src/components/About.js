@@ -11,7 +11,7 @@ const About = () => {
           href="https://github.com/CSSEGISandData/COVID-19"
           target="_blank"
           rel="noopener noreferrer"
-          className="github-JHU"
+          className="about-link"
         >
           this Github repository
         </a>{" "}
@@ -29,9 +29,16 @@ const About = () => {
       <br />
       <p>
         This site uses a public API (
-        <a href="https://www.cov-api.com/">https://www.cov-api.com/</a>) to
-        access the data gathered by JHU. The data provided by the API comes from
-        the Daily Report and Time Series directories in the JHU Github
+        <a
+          href="https://www.cov-api.com/"
+          className="about-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://www.cov-api.com/
+        </a>
+        ) to access the data gathered by JHU. The data provided by the API comes
+        from the Daily Report and Time Series directories in the JHU Github
         repository. There are some differences in statistics that are presented
         here. For example, the Daily Report information is displayed in the
         States / Territories list, while information for the charts is gathered
