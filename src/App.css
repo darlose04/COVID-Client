@@ -209,3 +209,8 @@ ul {
   text-decoration: underline;
   color: #b60006;
 }
+
+/* Daily Increases */
+.daily-increases {
+  margin-bottom: 2rem;
+}

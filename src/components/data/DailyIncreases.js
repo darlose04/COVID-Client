@@ -52,7 +52,7 @@ const DailyIncreases = ({ info, label, color }) => {
   };
 
   return (
-    <div>
+    <div className="daily-increases">
       <Line
         data={data}
         options={{ maintainAspectRatio: true }}
