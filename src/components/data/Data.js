@@ -119,7 +119,18 @@ const Data = () => {
           )}
           <StateBarChart dailyReport={dailyReport} />
           {cases.length > 0 && deaths.length > 0 ? (
-            <DailyIncreases cases={cases} deaths={deaths} />
+            <div>
+              <DailyIncreases
+                info={cases}
+                label={"Daily Increase in U.S. Cases"}
+                color="rgba(16,30,229,1)"
+              />
+              <DailyIncreases
+                info={deaths}
+                label={"Daily Increase in U.S. Deaths"}
+                color="rgba(198,9,9,1)"
+              />
+            </div>
           ) : (
             <div></div>
           )}
