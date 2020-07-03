@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Disclaimer from "../layout/Disclaimer";
+import Spinner from "../layout/Spinner";
 import CDList from "./CDList";
 import CountyList from "./CountyList";
 import Chart from "./Chart";
@@ -15,6 +16,7 @@ const Data = () => {
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
   const [stateName, handleChange] = useStateSelected("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getData = async () => {
@@ -26,6 +28,7 @@ const Data = () => {
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       // console.log(dailyReport);
       setDailyReport(dailyReport.data);
+      setLoading(false);
     };
 
     getData();
@@ -58,55 +61,69 @@ const Data = () => {
   return (
     <div className="data-wrapper">
       <Disclaimer />
-      {cases.length > 0 && deaths.length > 0 ? (
-        <div className="data">
-          <CDList handleChange={handleChange} dailyReport={dailyReport} />
-          <div className="charts">
-            {stateName === "" ? (
-              <div>
-                <Chart info={cases} label="Cases" color="rgba(16,30,229,1)" />
-                <Chart info={deaths} label="Deaths" color="rgba(198,9,9,1)" />
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div>
+          {cases.length > 0 && deaths.length > 0 ? (
+            <div className="data">
+              <CDList handleChange={handleChange} dailyReport={dailyReport} />
+              <div className="charts">
+                {stateName === "" ? (
+                  <div>
+                    <Chart
+                      info={cases}
+                      label="Cases"
+                      color="rgba(16,30,229,1)"
+                    />
+                    <Chart
+                      info={deaths}
+                      label="Deaths"
+                      color="rgba(198,9,9,1)"
+                    />
+                  </div>
+                ) : (
+                  <div>
+                    <Chart
+                      info={stateCountyCasesArr}
+                      label={stateName + " Cases"}
+                      color="rgba(16,30,229,1)"
+                    />
+                    <Chart
+                      info={stateCountyDeathsArr}
+                      label={stateName + " Deaths"}
+                      color="rgba(198,9,9,1)"
+                    />
+                  </div>
+                )}
               </div>
-            ) : (
-              <div>
-                <Chart
-                  info={stateCountyCasesArr}
-                  label={stateName + " Cases"}
-                  color="rgba(16,30,229,1)"
-                />
-                <Chart
-                  info={stateCountyDeathsArr}
-                  label={stateName + " Deaths"}
-                  color="rgba(198,9,9,1)"
-                />
+              <div className="county-list">
+                {stateName !== "" ? (
+                  <CountyList
+                    stateName={stateName}
+                    cases={stateCountyCasesArr}
+                    deaths={stateCountyDeathsArr}
+                  />
+                ) : (
+                  <div>
+                    <h3>
+                      Click on a state name to the left to display statistics
+                      related to that state's counties.
+                    </h3>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className="county-list">
-            {stateName !== "" ? (
-              <CountyList
-                stateName={stateName}
-                cases={stateCountyCasesArr}
-                deaths={stateCountyDeathsArr}
-              />
-            ) : (
-              <div>
-                <h3>
-                  Click on a state name to the left to display statistics
-                  related to that state's counties.
-                </h3>
-              </div>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div></div>
+          )}
+          <StateBarChart dailyReport={dailyReport} />
+          {cases.length > 0 && deaths.length > 0 ? (
+            <DailyIncreases cases={cases} deaths={deaths} />
+          ) : (
+            <div></div>
+          )}
         </div>
-      ) : (
-        <div></div>
-      )}
-      <StateBarChart dailyReport={dailyReport} />
-      {cases.length > 0 && deaths.length > 0 ? (
-        <DailyIncreases cases={cases} deaths={deaths} />
-      ) : (
-        <div></div>
       )}
     </div>
   );
