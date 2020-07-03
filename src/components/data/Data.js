@@ -5,6 +5,7 @@ import CDList from "./CDList";
 import CountyList from "./CountyList";
 import Chart from "./Chart";
 import StateBarChart from "./StateBarChart";
+import DailyIncreases from "./DailyIncreases";
 import useStateSelected from "../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
@@ -102,6 +103,7 @@ const Data = () => {
         <div></div>
       )}
       <StateBarChart dailyReport={dailyReport} />
+      <DailyIncreases cases={cases} deaths={deaths} />
     </div>
   );
 };
