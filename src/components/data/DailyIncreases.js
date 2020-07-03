@@ -28,7 +28,7 @@ const DailyIncreases = ({ cases, deaths }) => {
     labels: chartLabel,
     datasets: [
       {
-        label: "Daily Increase in Cases",
+        label: "Daily Increase in U.S. Cases",
         fill: false,
         lineTension: 0.1,
         backgroundColor: "rgba(16, 30, 229, 1)",
@@ -60,7 +60,7 @@ const DailyIncreases = ({ cases, deaths }) => {
         width={830}
         height={490}
       />
-      <HorizontalBar
+      <Bar
         data={data}
         options={{ maintainAspectRatio: true }}
         width={830}
