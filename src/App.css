@@ -99,7 +99,7 @@ ul {
 .totals {
   margin-bottom: 1rem;
   border-bottom: 1px dotted black;
-  height: 17%;
+  height: 170px;
 }
 
 .totals h2 {
@@ -118,7 +118,7 @@ ul {
 
 /* State List */
 .state-list {
-  height: 83%;
+  height: 803px;
   overflow: scroll;
 }
 
