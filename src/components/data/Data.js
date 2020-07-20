@@ -81,6 +81,16 @@ const Data = () => {
                       label="Deaths"
                       color="rgba(198,9,9,1)"
                     />
+                    <DailyIncreases
+                      info={cases}
+                      label={"Daily Increase in U.S. Cases"}
+                      color="rgba(16,30,229,1)"
+                    />
+                    <DailyIncreases
+                      info={deaths}
+                      label={"Daily Increase in U.S. Deaths"}
+                      color="rgba(198,9,9,1)"
+                    />
                   </div>
                 ) : (
                   <div>
@@ -117,8 +127,8 @@ const Data = () => {
           ) : (
             <div></div>
           )}
-          <StateBarChart dailyReport={dailyReport} />
-          {cases.length > 0 && deaths.length > 0 ? (
+          {/* <StateBarChart dailyReport={dailyReport} /> */}
+          {/* {cases.length > 0 && deaths.length > 0 ? (
             <div>
               <DailyIncreases
                 info={cases}
@@ -133,7 +143,7 @@ const Data = () => {
             </div>
           ) : (
             <div></div>
-          )}
+          )} */}
         </div>
       )}
     </div>
