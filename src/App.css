@@ -118,7 +118,7 @@ ul {
 
 /* State List */
 .state-list {
-  height: 803px;
+  height: 1823px;
   overflow: scroll;
 }
 
@@ -158,7 +158,7 @@ ul {
 .county-list {
   margin-right: 1rem;
   padding: 1rem;
-  max-height: 1000px;
+  height: 2035px;
   overflow: scroll;
 }
 
@@ -212,6 +212,6 @@ ul {
 
 /* Daily Increases */
 .daily-increases {
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
