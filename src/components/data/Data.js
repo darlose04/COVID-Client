@@ -73,12 +73,12 @@ const Data = () => {
                   <div>
                     <Chart
                       info={cases}
-                      label="Cases"
+                      label="Total U.S. Cases"
                       color="rgba(16,30,229,1)"
                     />
                     <Chart
                       info={deaths}
-                      label="Deaths"
+                      label="Total U.S. Deaths"
                       color="rgba(198,9,9,1)"
                     />
                     <DailyIncreases
@@ -102,6 +102,16 @@ const Data = () => {
                     <Chart
                       info={stateCountyDeathsArr}
                       label={stateName + " Deaths"}
+                      color="rgba(198,9,9,1)"
+                    />
+                    <DailyIncreases
+                      info={stateCountyCasesArr}
+                      label={"Daily Increase in " + stateName + " Cases"}
+                      color="rgba(16,30,229,1)"
+                    />
+                    <DailyIncreases
+                      info={stateCountyDeathsArr}
+                      label={"Daily Increase in " + stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
                   </div>
