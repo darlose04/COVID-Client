@@ -85,7 +85,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
-  max-height: 1000px;
+  height: 2000px;
   margin-bottom: 4rem;
 }
 
@@ -212,5 +212,6 @@ ul {
 
 /* Daily Increases */
 .daily-increases {
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }

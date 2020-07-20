@@ -137,7 +137,7 @@ const Data = () => {
           ) : (
             <div></div>
           )}
-          {/* <StateBarChart dailyReport={dailyReport} /> */}
+          <StateBarChart dailyReport={dailyReport} />
           {/* {cases.length > 0 && deaths.length > 0 ? (
             <div>
               <DailyIncreases
