@@ -44,7 +44,7 @@ const DailyIncreases = ({ info, label, color }) => {
         pointHoverBorderWidth: 2,
         pointRadius: 1,
         pointHitRadius: 10,
-        data: infoArray,
+        data: infoArray.reverse(),
       },
     ],
   };

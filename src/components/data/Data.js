@@ -55,10 +55,10 @@ const Data = () => {
 
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
 
-  stateCountyCasesArr.pop();
-  stateCountyCasesArr.pop();
-  stateCountyDeathsArr.pop();
-  stateCountyDeathsArr.pop();
+  // stateCountyCasesArr.pop();
+  // stateCountyCasesArr.pop();
+  // stateCountyDeathsArr.pop();
+  // stateCountyDeathsArr.pop();
 
   return (
     <div className="data-wrapper">
@@ -97,22 +97,26 @@ const Data = () => {
                 ) : (
                   <div>
                     <Chart
-                      info={stateCountyCasesArr}
+                      stateName={stateName}
+                      // info={stateCountyCasesArr}
                       label={stateName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <Chart
-                      info={stateCountyDeathsArr}
+                      stateName={stateName}
+                      // info={stateCountyDeathsArr}
                       label={stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
                     <DailyIncreases
-                      info={stateCountyCasesArr}
+                      stateName={stateName}
+                      // info={stateCountyCasesArr}
                       label={"Daily Increase in " + stateName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <DailyIncreases
-                      info={stateCountyDeathsArr}
+                      stateName={stateName}
+                      // info={stateCountyDeathsArr}
                       label={"Daily Increase in " + stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
