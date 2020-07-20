@@ -51,6 +51,8 @@ const Data = () => {
     }
   });
 
+  console.log(stateCountyDeathsArr);
+
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
 
   stateCountyCasesArr.pop();

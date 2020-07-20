@@ -21,6 +21,8 @@ const Chart = ({ info, label, color }) => {
     infoArray.push(numInfo);
   });
 
+  console.log(infoArray);
+
   const data = {
     labels: chartLabel,
     datasets: [

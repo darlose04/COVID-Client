@@ -22,8 +22,6 @@ const DailyIncreases = ({ info, label, color }) => {
     infoArray.push(dailyIncrease);
   }
 
-  console.log(infoArray.reverse());
-
   const data = {
     labels: chartLabel,
     datasets: [
