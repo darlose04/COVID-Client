@@ -7,6 +7,7 @@ import CountyList from "./CountyList";
 import Chart from "./Chart";
 import StateBarChart from "./StateBarChart";
 import DailyIncreases from "./DailyIncreases";
+import StateAPIRequest from "./StateAPIRequest";
 import useStateSelected from "../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
@@ -96,7 +97,7 @@ const Data = () => {
                   </div>
                 ) : (
                   <div>
-                    <Chart
+                    {/* <Chart
                       stateName={stateName}
                       // info={stateCountyCasesArr}
                       label={stateName + " Cases"}
@@ -119,7 +120,8 @@ const Data = () => {
                       // info={stateCountyDeathsArr}
                       label={"Daily Increase in " + stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
-                    />
+                    /> */}
+                    <StateAPIRequest stateName={stateName} />
                   </div>
                 )}
               </div>
