@@ -10,7 +10,7 @@ import DailyIncreases from "./DailyIncreases";
 // import StateAPIRequest from "./StateAPIRequest";
 import useStateSelected from "../../hooks/useStateSelected";
 
-// const baseUrl = "https://www.cov-api.com/api/usa";
+const baseUrl = "https://www.cov-api.com/api/usa";
 
 const Data = () => {
   const [cases, setCases] = useState([]);
@@ -21,21 +21,21 @@ const Data = () => {
 
   useEffect(() => {
     const getData = async () => {
-      // const caseRequests = await axios.get(`${baseUrl}/coronacases`);
-      const caseRequests = await axios.get(
-        "http://localhost:4100/api/usa/coronacases"
-      );
+      const caseRequests = await axios.get(`${baseUrl}/coronacases`);
+      // const caseRequests = await axios.get(
+      //   "http://localhost:4100/api/usa/coronacases"
+      // );
       // console.log(caseRequests);
       setCases(caseRequests.data);
-      // const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
-      const deathRequests = await axios.get(
-        "http://localhost:4100/api/usa/coronadeaths"
-      );
+      const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
+      // const deathRequests = await axios.get(
+      //   "http://localhost:4100/api/usa/coronadeaths"
+      // );
       setDeaths(deathRequests.data);
-      // const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
-      const dailyReport = await axios.get(
-        "http://localhost:4100/api/usa/dailyreport"
-      );
+      const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
+      // const dailyReport = await axios.get(
+      //   "http://localhost:4100/api/usa/dailyreport"
+      // );
       // console.log(dailyReport);
       setDailyReport(dailyReport.data);
       setLoading(false);
