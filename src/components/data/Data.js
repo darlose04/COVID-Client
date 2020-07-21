@@ -7,10 +7,10 @@ import CountyList from "./CountyList";
 import Chart from "./Chart";
 import StateBarChart from "./StateBarChart";
 import DailyIncreases from "./DailyIncreases";
-import StateAPIRequest from "./StateAPIRequest";
+// import StateAPIRequest from "./StateAPIRequest";
 import useStateSelected from "../../hooks/useStateSelected";
 
-const baseUrl = "https://www.cov-api.com/api/usa";
+// const baseUrl = "https://www.cov-api.com/api/usa";
 
 const Data = () => {
   const [cases, setCases] = useState([]);
@@ -21,12 +21,21 @@ const Data = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const caseRequests = await axios.get(`${baseUrl}/coronacases`);
+      // const caseRequests = await axios.get(`${baseUrl}/coronacases`);
+      const caseRequests = await axios.get(
+        "http://localhost:4100/api/usa/coronacases"
+      );
       // console.log(caseRequests);
       setCases(caseRequests.data);
-      const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
+      // const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
+      const deathRequests = await axios.get(
+        "http://localhost:4100/api/usa/coronadeaths"
+      );
       setDeaths(deathRequests.data);
-      const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
+      // const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
+      const dailyReport = await axios.get(
+        "http://localhost:4100/api/usa/dailyreport"
+      );
       // console.log(dailyReport);
       setDailyReport(dailyReport.data);
       setLoading(false);
@@ -52,14 +61,14 @@ const Data = () => {
     }
   });
 
-  console.log(stateCountyDeathsArr);
+  // console.log(stateCountyDeathsArr);
 
   // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
 
-  // stateCountyCasesArr.pop();
-  // stateCountyCasesArr.pop();
-  // stateCountyDeathsArr.pop();
-  // stateCountyDeathsArr.pop();
+  stateCountyCasesArr.pop();
+  stateCountyCasesArr.pop();
+  stateCountyDeathsArr.pop();
+  stateCountyDeathsArr.pop();
 
   return (
     <div className="data-wrapper">
@@ -97,31 +106,31 @@ const Data = () => {
                   </div>
                 ) : (
                   <div>
-                    {/* <Chart
+                    <Chart
                       stateName={stateName}
-                      // info={stateCountyCasesArr}
+                      info={stateCountyCasesArr}
                       label={stateName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <Chart
                       stateName={stateName}
-                      // info={stateCountyDeathsArr}
+                      info={stateCountyDeathsArr}
                       label={stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
                     <DailyIncreases
                       stateName={stateName}
-                      // info={stateCountyCasesArr}
+                      info={stateCountyCasesArr}
                       label={"Daily Increase in " + stateName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <DailyIncreases
                       stateName={stateName}
-                      // info={stateCountyDeathsArr}
+                      info={stateCountyDeathsArr}
                       label={"Daily Increase in " + stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
-                    /> */}
-                    <StateAPIRequest stateName={stateName} />
+                    />
+                    {/* <StateAPIRequest stateName={stateName} /> */}
                   </div>
                 )}
               </div>
