@@ -3,7 +3,7 @@ import numWithCommas from "../../numWithCommas";
 
 const CountyList = ({ stateName, cases, deaths }) => {
   let stateObjects = [];
-  console.log(deaths);
+  // console.log(deaths);
 
   const dateArray = [];
   dateArray.push(Object.keys(cases[0]));
@@ -11,7 +11,7 @@ const CountyList = ({ stateName, cases, deaths }) => {
 
   const recentDate = dates[dates.length - 1];
 
-  for (let i = 0; i < cases.length - 2; i++) {
+  for (let i = 0; i < cases.length; i++) {
     let stateObj = {
       id: cases[i].UID,
       county: cases[i].City,
