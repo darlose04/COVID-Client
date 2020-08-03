@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Disclaimer from "../../layout/Disclaimer";
 
 const GlobalData = () => {
   return (
-    <div>
-      <h1>This will display global data</h1>
+    <div className="data-wrapper">
+      <Disclaimer />
     </div>
   );
 };
