@@ -21,7 +21,6 @@ const CDList = ({ dailyReport, handleChange }) => {
                 item.Province_State === "Grand Princess" ||
                 item.Province_State === "Guam" ||
                 item.Province_State === "Northern Mariana Islands" ||
-                item.Province_State === "Puerto Rico" ||
                 item.Province_State === "Virgin Islands" ? (
                   <h3>{item.Province_State}</h3>
                 ) : (
