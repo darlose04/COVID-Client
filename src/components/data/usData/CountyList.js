@@ -1,5 +1,5 @@
 import React from "react";
-import numWithCommas from "../../numWithCommas";
+import numWithCommas from "../../../numWithCommas";
 
 const CountyList = ({ stateName, cases, deaths }) => {
   let stateObjects = [];

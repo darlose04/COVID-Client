@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Disclaimer from "../layout/Disclaimer";
-import Spinner from "../layout/Spinner";
+import Disclaimer from "../../layout/Disclaimer";
+import Spinner from "../../layout/Spinner";
 import CDList from "./CDList";
 import CountyList from "./CountyList";
 import Chart from "./Chart";
 import StateBarChart from "./StateBarChart";
 import DailyIncreases from "./DailyIncreases";
 // import StateAPIRequest from "./StateAPIRequest";
-import useStateSelected from "../../hooks/useStateSelected";
+import useStateSelected from "../../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
 

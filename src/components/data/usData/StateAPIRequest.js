@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Spinner from "../layout/Spinner";
+import Spinner from "../../layout/Spinner";
 import Chart from "./Chart";
 import DailyIncreases from "./DailyIncreases";
 
