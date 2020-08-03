@@ -41,7 +41,7 @@ const GlobalData = () => {
             <div className="data">
               <CountryList
                 handleChange={handleChange}
-                dailyreport={dailyReport}
+                dailyReport={dailyReport}
               />
             </div>
           ) : (
