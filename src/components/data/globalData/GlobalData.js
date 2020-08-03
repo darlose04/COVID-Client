@@ -3,6 +3,7 @@ import axios from "axios";
 import Disclaimer from "../../layout/Disclaimer";
 import Spinner from "../../layout/Spinner";
 import useCountrySelected from "../../../hooks/useCountrySelected";
+import CountryList from "./CountryList";
 
 const baseUrl = "https://www.cov-api.com/api/global";
 
@@ -37,7 +38,12 @@ const GlobalData = () => {
       ) : (
         <div>
           {cases.length > 0 && deaths.length > 0 ? (
-            <div className="data">List goes here</div>
+            <div className="data">
+              <CountryList
+                handleChange={handleChange}
+                dailyreport={dailyReport}
+              />
+            </div>
           ) : (
             <div></div>
           )}
