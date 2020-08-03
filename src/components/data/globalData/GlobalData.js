@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Disclaimer from "../../layout/Disclaimer";
 import Spinner from "../../layout/Spinner";
-import useStateSelected from "../../../hooks/useStateSelected";
+import useCountrySelected from "../../../hooks/useCountrySelected";
 
 const baseUrl = "https://www.cov-api.com/api/global";
 
@@ -10,7 +10,7 @@ const GlobalData = () => {
   const [cases, setCases] = useState([]);
   const [deaths, setDeaths] = useState([]);
   const [dailyReport, setDailyReport] = useState([]);
-  const [stateName, handleChange] = useStateSelected("");
+  const [countryName, handleChange] = useCountrySelected("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -32,7 +32,17 @@ const GlobalData = () => {
   return (
     <div className="data-wrapper">
       <Disclaimer />
-      {loading ? <Spinner /> : <div>Data Loaded</div>}
+      {loading ? (
+        <Spinner />
+      ) : (
+        <div>
+          {cases.length > 0 && deaths.length > 0 ? (
+            <div className="data">List goes here</div>
+          ) : (
+            <div></div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
