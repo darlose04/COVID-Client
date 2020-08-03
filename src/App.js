@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Home from "./components/Home";
 import Data from "./components/data/usData/Data";
-import USMap from "./components/data/usData/USMap";
+// import USMap from "./components/data/usData/USMap";
 import About from "./components/About";
 
 function App() {
