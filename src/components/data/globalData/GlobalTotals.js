@@ -15,8 +15,8 @@ const GlobalTotals = ({ dailyReport, handleChange }) => {
   });
 
   return (
-    <div className="totals">
-      <h2 className="US-Totals" onClick={handleChange}>
+    <div className="global-totals">
+      <h2 className="Global-Totals" onClick={handleChange}>
         Global Totals
       </h2>
       <ul>

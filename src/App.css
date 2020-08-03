@@ -215,3 +215,22 @@ ul {
   margin-top: 1rem;
   margin-bottom: 2rem;
 }
+
+/* Global Page CSS */
+
+/* Global Totals */
+.global-totals {
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted black;
+  height: 130px;
+}
+
+.global-totals h2 {
+  border-bottom: 2px solid black;
+  margin-bottom: 0.5rem;
+}
+
+.Global-Totals:hover {
+  cursor: pointer;
+  color: red;
+}
