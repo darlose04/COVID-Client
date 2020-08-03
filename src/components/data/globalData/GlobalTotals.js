@@ -1,4 +1,5 @@
 import React from "react";
+import numWithCommas from "../../../numWithCommas";
 
 const GlobalTotals = () => {
   return (

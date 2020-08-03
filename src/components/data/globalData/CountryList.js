@@ -1,5 +1,6 @@
 import React from "react";
 import GlobalTotals from "./GlobalTotals";
+import numWithCommas from "../../../numWithCommas";
 
 const CountryList = () => {
   return (
