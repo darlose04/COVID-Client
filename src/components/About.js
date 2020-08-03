@@ -42,9 +42,9 @@ const About = () => {
         repository. There are some differences in statistics that are presented
         here. For example, the Daily Report information is displayed in the
         States / Territories list, while information for the charts is gathered
-        from the Time Series directories. In some cases, such as the information
-        regarding Rhode Island, the numbers do not line up. This is due to a
-        difference in the data that is gathered by JHU.
+        from the Time Series directories. In some cases the numbers do not
+        exactly line up. This is due to differences between the two directories
+        regarding available data .
       </p>
     </section>
   );
