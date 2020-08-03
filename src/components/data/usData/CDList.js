@@ -1,6 +1,6 @@
 import React from "react";
 import Totals from "./Totals";
-import numWithCommas from "../../numWithCommas";
+import numWithCommas from "../../../numWithCommas";
 
 const CDList = ({ dailyReport, handleChange }) => {
   return (
