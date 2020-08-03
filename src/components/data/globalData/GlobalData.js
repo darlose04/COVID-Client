@@ -27,9 +27,12 @@ const GlobalData = () => {
     getData();
   }, []);
 
+  console.log(cases);
+
   return (
     <div className="data-wrapper">
       <Disclaimer />
+      {loading ? <Spinner /> : <div>Data Loaded</div>}
     </div>
   );
 };
