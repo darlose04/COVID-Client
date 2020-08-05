@@ -5,11 +5,19 @@ import numWithCommas from "../../../numWithCommas";
 const CountryList = ({ dailyReport, handleChange }) => {
   // create array to store arrays of country objects
   // every object with the same Country_Region is in the same array
-  countryStats = [];
+  let countryArr = [];
+
+  for (let i = 0; i < dailyReport.length; i++) {
+    if (!countryArr.includes(dailyReport[i].Country_Region)) {
+      countryArr.push(dailyReport[i].Country_Region);
+    }
+  }
+
+  let countryStats = [];
 
   countryArr.map((country) => {
-    singleCountryStats = [];
-    info.map((obj) => {
+    let singleCountryStats = [];
+    dailyReport.map((obj) => {
       if (obj.Country_Region === country) {
         singleCountryStats.push(obj);
       }
