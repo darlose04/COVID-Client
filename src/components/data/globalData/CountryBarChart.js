@@ -58,7 +58,7 @@ const StateBarChart = ({ dailyReport }) => {
   });
 
   const data = {
-    labels: countryName,
+    labels: countryNames,
     datasets: [
       {
         label: "Cases",
