@@ -6,6 +6,7 @@ import useCountrySelected from "../../../hooks/useCountrySelected";
 import CountryList from "./CountryList";
 import Chart from "../Chart";
 import DailyIncreases from "../DailyIncreases";
+import CountryBarChart from "./CountryBarChart";
 
 const baseUrl = "https://www.cov-api.com/api/global";
 
@@ -117,6 +118,7 @@ const GlobalData = () => {
           ) : (
             <div></div>
           )}
+          <CountryBarChart dailyReport={dailyReport} />
         </div>
       )}
     </div>
