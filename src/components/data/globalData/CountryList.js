@@ -74,7 +74,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
 
             return (
               <li key={item.Index}>
-                <h3 onCLick={handleChange}>{item.Country_Region}</h3>
+                <h3 onClick={handleChange}>{item.Country_Region}</h3>
                 <p>Cases: {numWithCommas(numCases)}</p>
                 <p>Deaths: {numWithCommas(numDeaths)}</p>
                 {numRecovered ? (
