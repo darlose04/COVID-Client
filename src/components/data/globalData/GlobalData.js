@@ -30,6 +30,23 @@ const GlobalData = () => {
     getData();
   }, []);
 
+  let singleCountryCases = [];
+  let singleCountryDeaths = [];
+
+  cases.map((obj) => {
+    if (obj.Country === countryName) {
+      singleCountryCases.push(obj);
+    }
+  });
+
+  deaths.map((obj) => {
+    if (obj.Country === countryName) {
+      singleCountryDeaths.push(obj);
+    }
+  });
+
+  console.log(singleCountryCases);
+
   return (
     <div className="data-wrapper">
       <Disclaimer />
@@ -69,30 +86,30 @@ const GlobalData = () => {
                   </div>
                 ) : (
                   <div>
-                    {/* <Chart
+                    <Chart
                       countryName={countryName}
-                      info={stateCountyCasesArr}
+                      info={singleCountryCases}
                       label={countryName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <Chart
                       countryName={countryName}
-                      info={stateCountyDeathsArr}
+                      info={singleCountryDeaths}
                       label={countryName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
                     <DailyIncreases
                       countryName={countryName}
-                      info={stateCountyCasesArr}
+                      info={singleCountryCases}
                       label={"Daily Increase in " + countryName + " Cases"}
                       color="rgba(16,30,229,1)"
                     />
                     <DailyIncreases
                       countryName={countryName}
-                      info={stateCountyDeathsArr}
+                      info={singleCountryDeaths}
                       label={"Daily Increase in " + countryName + " Deaths"}
                       color="rgba(198,9,9,1)"
-                    /> */}
+                    />
                   </div>
                 )}
               </div>
