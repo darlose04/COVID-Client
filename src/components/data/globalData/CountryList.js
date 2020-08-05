@@ -38,11 +38,13 @@ const CountryList = ({ dailyReport, handleChange }) => {
       Recovered: 0,
     };
 
-    item.map((itemObj) => {
-      (countryTotalsObj.Confirmed += itemObj.Confirmed),
+    item.map(
+      (itemObj) => (
+        (countryTotalsObj.Confirmed += itemObj.Confirmed),
         (countryTotalsObj.Deaths += itemObj.Deaths),
-        (countryTotalsObj.Recovered += itemObj.Recovered);
-    });
+        (countryTotalsObj.Recovered += itemObj.Recovered)
+      )
+    );
 
     countryObjArr.push(countryTotalsObj);
   });
