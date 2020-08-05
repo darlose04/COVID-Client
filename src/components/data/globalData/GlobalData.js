@@ -4,6 +4,7 @@ import Disclaimer from "../../layout/Disclaimer";
 import Spinner from "../../layout/Spinner";
 import useCountrySelected from "../../../hooks/useCountrySelected";
 import CountryList from "./CountryList";
+import Chart from "../usData/Chart";
 
 const baseUrl = "https://www.cov-api.com/api/global";
 
