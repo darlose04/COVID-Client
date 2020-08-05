@@ -64,7 +64,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
   return (
     <div className="list-data">
       <GlobalTotals dailyReport={dailyReport} handleChange={handleChange} />
-      <div className="state-list">
+      <div className="country-list">
         <h2>Countries</h2>
         <ul>
           {countryObjArr.map((item) => {
