@@ -47,6 +47,14 @@ const StateBarChart = ({ dailyReport }) => {
     countryObjArr.push(countryTotalsObj);
   });
 
+  countryObjArr.sort((a, b) => {
+    return a.Country_Region < b.Country_region
+      ? -1
+      : a.Country_Region > b.Country_Region
+      ? 1
+      : 0;
+  });
+
   const countryNames = [];
   const countryCases = [];
   const countryDeaths = [];
@@ -83,7 +91,7 @@ const StateBarChart = ({ dailyReport }) => {
 
   return (
     <div className="state-bar-chart">
-      <HorizontalBar data={data} height={270} />
+      <HorizontalBar data={data} height={600} />
     </div>
   );
 };
