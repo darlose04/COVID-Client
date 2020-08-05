@@ -59,7 +59,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
       : 0;
   });
 
-  console.log(countryObjArr);
+  // console.log(countryObjArr);
 
   return (
     <div className="list-data">
