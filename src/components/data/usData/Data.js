@@ -4,9 +4,9 @@ import Disclaimer from "../../layout/Disclaimer";
 import Spinner from "../../layout/Spinner";
 import CDList from "./CDList";
 import CountyList from "./CountyList";
-import Chart from "./Chart";
+import Chart from "../Chart";
 import StateBarChart from "./StateBarChart";
-import DailyIncreases from "./DailyIncreases";
+import DailyIncreases from "../DailyIncreases";
 // import StateAPIRequest from "./StateAPIRequest";
 import useStateSelected from "../../../hooks/useStateSelected";
 
