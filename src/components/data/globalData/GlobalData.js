@@ -80,8 +80,8 @@ const GlobalData = () => {
                       info={stateCountyDeathsArr}
                       label={countryName + " Deaths"}
                       color="rgba(198,9,9,1)"
-                    /> */}
-                    {/* <DailyIncreases
+                    />
+                    <DailyIncreases
                       countryName={countryName}
                       info={stateCountyCasesArr}
                       label={"Daily Increase in " + countryName + " Cases"}
