@@ -50,7 +50,15 @@ const CountryList = ({ dailyReport, handleChange }) => {
     countryObjArr.push(countryTotalsObj);
   });
 
-  // countryObjArr.sort();
+  // sort countries alphabetically
+  countryObjArr.sort((a, b) => {
+    return a.Country_Region < b.Country_region
+      ? -1
+      : a.Country_Region > b.Country_Region
+      ? 1
+      : 0;
+  });
+
   console.log(countryObjArr);
 
   return (
@@ -65,7 +73,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
             let numRecovered = item.Recovered;
 
             return (
-              <li key={item.index}>
+              <li key={item.Index}>
                 <h3>{item.Country_Region}</h3>
                 <p>Cases: {numWithCommas(numCases)}</p>
                 <p>Deaths: {numWithCommas(numDeaths)}</p>
