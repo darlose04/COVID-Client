@@ -91,7 +91,7 @@ const StateBarChart = ({ dailyReport }) => {
 
   return (
     <div className="state-bar-chart">
-      <HorizontalBar data={data} height={600} />
+      <HorizontalBar data={data} height={800} />
     </div>
   );
 };
