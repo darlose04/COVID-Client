@@ -29,13 +29,14 @@ const CountryList = ({ dailyReport, handleChange }) => {
   // map through countryStats array, create a new object that sums the stats for each country
   // push that object into a new array in order to have an array with all the country stats summed for each country
   let countryObjArr = [];
-
+  let indexCounter = 0;
   countryStats.map((item) => {
     let countryTotalsObj = {
       Country_Region: item[0].Country_Region,
       Confirmed: 0,
       Deaths: 0,
       Recovered: 0,
+      Index: indexCounter++,
     };
 
     item.map(
@@ -49,6 +50,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
     countryObjArr.push(countryTotalsObj);
   });
 
+  // countryObjArr.sort();
   console.log(countryObjArr);
 
   return (
@@ -57,7 +59,7 @@ const CountryList = ({ dailyReport, handleChange }) => {
       <div className="state-list">
         <h2>Countries</h2>
         <ul>
-          {dailyReport.map((item) => {
+          {countryObjArr.map((item) => {
             let numCases = item.Confirmed;
             let numDeaths = item.Deaths;
             let numRecovered = item.Recovered;
