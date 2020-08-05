@@ -17,6 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "netlify-build": "mv build/_redirects src/ && npm run build && mv src/_redirects build/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
