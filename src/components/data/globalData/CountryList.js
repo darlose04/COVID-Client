@@ -3,6 +3,44 @@ import GlobalTotals from "./GlobalTotals";
 import numWithCommas from "../../../numWithCommas";
 
 const CountryList = ({ dailyReport, handleChange }) => {
+  // create array to store arrays of country objects
+  // every object with the same Country_Region is in the same array
+  countryStats = [];
+
+  countryArr.map((country) => {
+    singleCountryStats = [];
+    info.map((obj) => {
+      if (obj.Country_Region === country) {
+        singleCountryStats.push(obj);
+      }
+    });
+
+    countryStats.push(singleCountryStats);
+  });
+
+  // map through countryStats array, create a new object that sums the stats for each country
+  // push that object into a new array in order to have an array with all the country stats summed for each country
+  let countryObjArr = [];
+
+  countryStats.map((item) => {
+    let countryTotalsObj = {
+      Country_Region: item[0].Country_Region,
+      Confirmed: 0,
+      Deaths: 0,
+      Recovered: 0,
+    };
+
+    item.map((itemObj) => {
+      (countryTotalsObj.Confirmed += itemObj.Confirmed),
+        (countryTotalsObj.Deaths += itemObj.Deaths),
+        (countryTotalsObj.Recovered += itemObj.Recovered);
+    });
+
+    countryObjArr.push(countryTotalsObj);
+  });
+
+  console.log(countryObjArr);
+
   return (
     <div className="list-data">
       <GlobalTotals dailyReport={dailyReport} handleChange={handleChange} />
