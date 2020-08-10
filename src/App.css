@@ -46,6 +46,10 @@ ul {
   border-bottom: red 2px solid;
 }
 
+.selected {
+  border-bottom: red 2px solid;
+}
+
 .navbar ul {
   display: flex;
 }
