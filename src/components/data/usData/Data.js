@@ -7,7 +7,6 @@ import CountyList from "./CountyList";
 import Chart from "../Chart";
 import StateBarChart from "./StateBarChart";
 import DailyIncreases from "../DailyIncreases";
-// import StateAPIRequest from "./StateAPIRequest";
 import useStateSelected from "../../../hooks/useStateSelected";
 
 const baseUrl = "https://www.cov-api.com/api/usa";
