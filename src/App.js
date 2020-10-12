@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       <Navbar />
       <Switch>
-        {/* <Route exact path="/" render={() => <Home />} /> */}
         <Route exact path="/" render={() => <Data />} />
+        {/* <Route exact path="/us" render={() => <Data />} /> */}
         <Route exact path="/global" render={() => <GlobalData />} />
         {/* <Route exact path="/usmap" render={() => <USMap />} /> */}
         <Route exact path="/about" render={() => <About />} />
