@@ -14,7 +14,7 @@ const CountyList = ({ stateName, cases, deaths }) => {
   for (let i = 0; i < cases.length; i++) {
     let stateObj = {
       id: cases[i].UID,
-      county: cases[i].City,
+      county: cases[i].County,
       cases: numWithCommas(cases[i][recentDate]),
       deaths: numWithCommas(deaths[i][recentDate]),
     };
