@@ -14,12 +14,12 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li> */}
             <li>
-              <NavLink to="/" activeClassName="selected">
+              <NavLink to="/" /* activeClassName="selected" */>
                 United States
               </NavLink>
             </li>
             <li>
-              <NavLink to="/global" activeClassName="selected">
+              <NavLink to="/global" /* activeClassName="selected" */>
                 Global
               </NavLink>
             </li>
@@ -27,7 +27,7 @@ const Navbar = () => {
               <NavLink to="/usmap">U.S. Map</NavLink>
             </li> */}
             <li>
-              <NavLink to="/about" activeClassName="selected">
+              <NavLink to="/about" /* activeClassName="selected" */>
                 About
               </NavLink>
             </li>
