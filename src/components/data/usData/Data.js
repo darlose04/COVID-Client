@@ -34,7 +34,7 @@ const Data = () => {
       setDeaths(deathRequests.data);
       const dailyReport = await axios.get(`${baseUrl}/dailyreport`);
       // const dailyReport = await axios.get(
-      //   "http://localhost:4100/api/usa/dailyreport"
+      // "http://localhost:4100/api/usa/dailyreport"
       // );
       // console.log(dailyReport);
       setDailyReport(dailyReport.data);
@@ -60,16 +60,6 @@ const Data = () => {
       stateCountyDeathsArr.push(obj);
     }
   });
-
-  // console.log(stateCountyDeathsArr);
-
-  // removing the "Unassigned" and "Out of 'State'" county values from each actual state (not territories)
-
-  // console.log(stateCountyDeathsArr);
-  // stateCountyCasesArr.pop();
-  // stateCountyCasesArr.pop();
-  // stateCountyDeathsArr.pop();
-  // stateCountyDeathsArr.pop();
 
   return (
     <div className="data-wrapper">
@@ -131,7 +121,6 @@ const Data = () => {
                       label={"Daily Increase in " + stateName + " Deaths"}
                       color="rgba(198,9,9,1)"
                     />
-                    {/* <StateAPIRequest stateName={stateName} /> */}
                   </div>
                 )}
               </div>
@@ -156,22 +145,6 @@ const Data = () => {
             <div></div>
           )}
           <StateBarChart dailyReport={dailyReport} />
-          {/* {cases.length > 0 && deaths.length > 0 ? (
-            <div>
-              <DailyIncreases
-                info={cases}
-                label={"Daily Increase in U.S. Cases"}
-                color="rgba(16,30,229,1)"
-              />
-              <DailyIncreases
-                info={deaths}
-                label={"Daily Increase in U.S. Deaths"}
-                color="rgba(198,9,9,1)"
-              />
-            </div>
-          ) : (
-            <div></div>
-          )} */}
         </div>
       )}
     </div>
