@@ -24,7 +24,6 @@ const Data = () => {
       // const caseRequests = await axios.get(
       //   "http://localhost:4100/api/usa/coronacases"
       // );
-      // console.log(caseRequests);
       setCases(caseRequests.data);
       const deathRequests = await axios.get(`${baseUrl}/coronadeaths`);
       // const deathRequests = await axios.get(
