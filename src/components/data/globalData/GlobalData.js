@@ -9,6 +9,7 @@ import DailyIncreases from "../DailyIncreases";
 import CountryBarChart from "./CountryBarChart";
 
 const baseUrl = "https://www.cov-api.com/api/global";
+// const baseUrl = "http://localhost:4100/api/global";
 
 const GlobalData = () => {
   const [cases, setCases] = useState([]);
