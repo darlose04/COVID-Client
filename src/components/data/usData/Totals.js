@@ -14,7 +14,7 @@ const Totals = ({ dailyReport, handleChange }) => {
     totalDeaths += state.Deaths;
     totalActive += state.Active;
     totalHospitalized += state.People_Hospitalized;
-    totalTested += state.People_Tested;
+    totalTested += state.Total_Test_Results;
     totalRecovered += state.Recovered;
   });
 
@@ -27,7 +27,10 @@ const Totals = ({ dailyReport, handleChange }) => {
         <li>Confirmed: {numWithCommas(totalCases)}</li>
         <li>Deaths: {numWithCommas(totalDeaths)}</li>
         <li>Active: {numWithCommas(totalActive)}</li>
-        <li>Hospitalized: {numWithCommas(totalHospitalized)}</li>
+        <li>
+          Hospitalized: {/* {numWithCommas(totalHospitalized)} */}Data
+          unavailable
+        </li>
         <li>Tested: {numWithCommas(totalTested)}</li>
         <li>Recovered: {numWithCommas(totalRecovered)}</li>
       </ul>
